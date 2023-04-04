@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+:root {
+    --primary-green:  #0a9544;
+    --primary-light: #709dff;
+}
+
+@layer base {
+
+    body {
+        @apply font-[Lato]
+    }
+
+    li {
+        @apply p-4 font-bold
+    }
+
+    h1 {
+        @apply text-4xl md:text-4xl font-bold
+    }
+
+    h2 {
+       @apply text-3xl font-bold      
+    }
+
+    h3 {
+        @apply text-xl font-bold
+    }
+
+    button {
+        @apply p-4 rounded-full border shadow-sm shadow-gray-400 
+    }
+    
+    .icon {
+        @apply text-3xl cursor-pointer
+    }
+}
