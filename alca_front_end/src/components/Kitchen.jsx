@@ -8,8 +8,8 @@ import fifth_kitchen from '../assets/fifth_kitchen.jpg';
 const Kitchen = () => {
   return (
     <div className='max-w-[1240px] mx-auto py-16 px-4 text-center'>
-        <h1 className='mb-3'>Legjobb konyhai gépek</h1>
-        <p>Hajdú Bihar Vármegye szivében</p>
+        <h1>Legjobb konyhai gépek</h1>
+        <p className='py-4'>Hajdú Bihar Vármegye szivében</p>
         <div className='grid grid-rows-none md:grid-cols-4 py-4 gap-2 md:gap-4'>
             <img className='w-full h-full object-cover col-span-2 md:col-span-2 row-span-2' src={first_kitchen} alt="/" />
             <img className='w-full h-full object-cover' src={second_kitchen} alt="/" />
