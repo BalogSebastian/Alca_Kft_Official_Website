@@ -11,6 +11,22 @@
 
 @layer base {
 
+    #fooldal_dropdown {
+        @apply p-4 font-bold md:ml-4
+    }
+    #konyhai_eszkozok_dropdown {
+        @apply p-4 font-bold md:ml-4
+    }
+    #konyhai_kiegeszitok_dropdown {
+        @apply p-4 font-bold md:ml-4
+    }
+    #butor_katalogus_dropdown {
+        @apply p-4 font-bold md:ml-4
+    }   
+    #elerhetoseg_dropdown {
+        @apply p-4 font-bold md:ml-4
+    }
+
     body {
         @apply font-[Lato]
     }
@@ -31,7 +47,7 @@
         @apply text-xl font-bold
     }
 
-    button {
+    #search_button_hero_page {
         @apply p-4 rounded-full border shadow-sm shadow-gray-400 
     }
     
@@ -39,3 +55,4 @@
         @apply text-3xl cursor-pointer
     }
 }
+ 

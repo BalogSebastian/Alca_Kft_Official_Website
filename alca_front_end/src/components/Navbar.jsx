@@ -19,11 +19,11 @@ const Navbar = () => {
             <h1 onClick={handleNav}  className={logo ? 'hidden' : 'block'}>Alca Kft.</h1>
         </div>
         <ul className='hidden md:flex'>
-            <li>Főoldal</li>
-            <li>Konyhai eszközök</li>
-            <li>Konyhai kiegészitők</li>
-            <li>Bútor katalógus</li>
-            <li>Elérhetőség</li>
+            <button id='fooldal_dropdown' data-dropdown-toogle='dropdown_1' className='border-b'>Főoldal</button>
+            <button id='konyhai_eszkozok_dropdown' data-dropdown-toogle='dropdown_2' className='border-b'>Konyhai eszközök</button>
+            <button id='konyhai_kiegeszitok_dropdown' data-dropdown-toogle='dropdown_3' className='border-b'>Konyhai kiegészitők</button>
+            <button id='butor_katalogus_dropdown' data-dropdown-toogle='dropdown_4' className='border-b'>Bútor katalógus</button>
+            <button id='elerhetoseg_dropdown' data-dropdown-toogle='dropdown_5' className='border-b'>Elérhetőség</button>
         </ul>
         <div className='hidden md:flex'>
             <BiSearch className='mr-2' size={25}/>
@@ -40,7 +40,7 @@ const Navbar = () => {
 
         <div onClick={handleNav} className={nav ? 'absolute text-black left-0 top-0 w-full bg-gray-200/90 px-14 py-10 flex flex-col' : 'absolute left-[-100%]'}>
             <ul>
-                <h1>Alca Kft.</h1>
+                <h1>Alca Kft.</h1>  
                 <li className='border-b'>Főoldal</li>
                 <li className='border-b'>Konyhai eszközök</li>
                 <li className='border-b'>Konyhai kiegészitők</li>
