@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Furniture from "./components/Furniture";
 import Kitchen from "./components/Kitchen";
 import Kitchen_Accessory from './components/Kitchen_Accessory';
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Furniture/>
       <Kitchen/>
       <Kitchen_Accessory/>
+      <Footer/>
     </div>
   );
 }
