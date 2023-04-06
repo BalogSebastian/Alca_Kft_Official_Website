@@ -21,12 +21,12 @@ const Hero = ()  => {
         <h2 className='py-2'>Minőség, megbízhatóság és odafigyelés</h2>
         <form className='flex justify-center items-center max-w-[700px] mx-auto w-full p-3 rounded-md'>
           <div>
-          <input className='p-4 rounded-full w-[300px] sm:w-[400px] font-bold focus:outline-none'
+          <input className='p-4 rounded-full w-[300px] sm:w-[400px] font-bold text-black focus:outline-none'
            type='text'
             placeholder='Keress a katalógusból'/> 
           </div>  
           <div>
-            <button id='search_button_hero_page' ><AiOutlineSearch size={20} className='icon' /></button>
+            <button id='search_button_hero_page'><AiOutlineSearch size={20} className='icon'/></button>
           </div>
         </form>
     </div>

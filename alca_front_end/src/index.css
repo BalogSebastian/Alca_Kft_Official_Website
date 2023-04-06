@@ -11,7 +11,7 @@
 
 @layer base {
 
-    #fooldal_dropdown {
+    #bemutatkozas_dropdown {
         @apply p-4 font-bold md:ml-4
     }
     #konyhai_eszkozok_dropdown {
