@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import aran from '../assets/aran.mp4';
 
 const FurnitureAran = () => {
   return (
-    <div>
-      
+    <div className='w-full h-screen relative'>
+      <video className='w-full h-full object-cover'
+          src={aran}
+            autoPlay
+              loop
+                muted/>
     </div>
   )
 }

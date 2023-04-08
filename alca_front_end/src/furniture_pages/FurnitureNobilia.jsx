@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import nobilia from '../assets/nobilia.mp4';
 
 const FurnitureNobilia = () => {
   return (
-    <div>
-      <h1>Nobilia Oldal</h1>
+    <div className='w-full h-screen relative'>
+      <video className='w-full h-full object-cover'
+     src={nobilia}
+      autoPlay
+       loop
+        muted/>
     </div>
   )
 }

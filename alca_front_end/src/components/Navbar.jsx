@@ -9,6 +9,9 @@ import { Menu, Transition } from '@headlessui/react';
 import { BrowserRouter, Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 import FurnitureNobilia from '../furniture_pages/FurnitureNobilia';
+import FurnitureAran from '../furniture_pages/FurnitureAran';
+import FurnitureLube from '../furniture_pages/FurnitureLube';
+import FurnitureVertex from '../furniture_pages/FurnitureVertex';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -404,70 +407,76 @@ export default function Navbar() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
                 >
-                <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 w-40 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                to="../furniture_pages/FurnitureNobilia" 
+                                element={<FurnitureNobilia/>}
+                                exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt1-Bútor_katalógus
-                                </a>
+                                    Nobilia
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to="../furniture_pages/FurnitureAran" 
+                                    element={<FurnitureAran/>}
+                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt2-Bútor_katalógus
-                                </a>
+                                    Aran
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to="../furniture_pages/FurnitureLube" 
+                                    element={<FurnitureLube/>}
+                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt3-Bútor_katalógus
-                                </a>
+                                    Lube
+                                </Link>
                             )}
                         </Menu.Item>
-                        <form method="POST" action="#">
                             <Menu.Item>
                                 {({ active }) => (
-                                    <button
-                                        type="submit"
+                                    <Link
+                                        to="../furniture_pages/FurnitureVertex" 
+                                        element={<FurnitureVertex/>}
+                                        xact
                                         className={classNames(
                                             active
                                                 ? "bg-gray-100 text-gray-900"
                                                 : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
+                                            "block w-full px-4 py-2 text-center"
                                         )}
                                     >
-                                        Teszt4-Bútor_katalógus
-                                    </button>
+                                        Vertex
+                                    </Link>
                                 )}
                             </Menu.Item>
-                        </form>
                     </div>
                 </Menu.Items>
             </Transition>
