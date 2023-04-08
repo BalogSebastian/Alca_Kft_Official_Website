@@ -6,10 +6,13 @@ import { HiOutlineMenuAlt4} from 'react-icons/hi';
 import {FaFacebook, FaInstagram, FaPinterest} from 'react-icons/fa';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
+import { BrowserRouter, Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import FurnitureNobilia from '../furniture_pages/FurnitureNobilia';
 
-  function classNames(...classes) {
+function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
-  }
+}
 
 export default function Navbar() {
 
@@ -22,7 +25,7 @@ export default function Navbar() {
   return (
 
     <Menu>
-    <div className='flex w-full justify-between items-center h-20 px-10 absolute z-10 text-white'>
+    <div className='flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white'>
         <div>
             <h1 onClick={handleNav}  className={logo ? 'hidden' : 'block'}>Alca Kft.</h1>
         </div>
@@ -51,7 +54,6 @@ export default function Navbar() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -81,7 +83,7 @@ export default function Navbar() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
+                                    href=""
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -134,8 +136,10 @@ export default function Navbar() {
                     <div className="py-2">
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                to="../furniture_pages/FurnitureNobilia" 
+                                element={<FurnitureNobilia/>}
+                                exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -144,7 +148,7 @@ export default function Navbar() {
                                     )}
                                 >
                                     Teszt1-Konyhai_Eszköz
-                                </a>
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>

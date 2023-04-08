@@ -23,6 +23,7 @@ export default function Footer() {
             <li>Jogvédelem</li>
             <li>Partnerek</li>
             <li>Elérhetőség</li>
+            <li>Pozicíók</li>
           </ul>
           <ul className='text-right lg:flex'>
             <li>Bemutatkozás</li>
