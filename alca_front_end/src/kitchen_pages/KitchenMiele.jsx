@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
+import kitchen_miele from '../assets/kitchen_miele.mp4';
 
-const KitchenMiele = () => {
+export default function KitchenMiele() {
   return (
-    <div>
-      
-    </div>
+
+    <div className='w-full h-screen relative'>
+    <video className='w-full h-full object-cover'
+        src={kitchen_miele}
+          autoPlay
+            loop
+              muted/>
+  </div>
+
   )
 }
 
-export default KitchenMiele;

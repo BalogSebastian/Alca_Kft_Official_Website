@@ -20,8 +20,8 @@ export default function FurnitureAranNavbarComponent() {
       setNav(!nav);
       setLogo(!logo)
   }
-  
-  return (
+
+return (
 
     <Menu>
     <div className='flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white'>

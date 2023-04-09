@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
+import kitchen_electrolux from '../assets/kitchen_electrolux.mp4';
 
-const KitchenElectrolux = () => {
+export default function KitchenElectrolux (){
   return (
-    <div>
-      
-    </div>
+
+    <div className='w-full h-screen relative'>
+    <video className='w-full h-full object-cover'
+        src={kitchen_electrolux}
+          autoPlay
+            loop
+              muted/>
+  </div>
+
   )
 }
 
-export default KitchenElectrolux;

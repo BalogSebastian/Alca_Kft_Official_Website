@@ -12,6 +12,12 @@ import FurnitureNobilia from '../furniture_pages/FurnitureNobilia';
 import FurnitureAran from '../furniture_pages/FurnitureAran';
 import FurnitureLube from '../furniture_pages/FurnitureLube';
 import FurnitureVertex from '../furniture_pages/FurnitureVertex';
+import KitchenAeg from '../kitchen_pages/KitchenAeg';
+import KitchenBosch from '../kitchen_pages/KitchenBosch';
+import KitchenElectrolux from '../kitchen_pages/KitchenElectrolux';
+import KitchenMiele from '../kitchen_pages/KitchenMiele';
+import KitchenNeff from '../kitchen_pages/KitchenNeff';
+import KitchenWhirlpool from '../kitchen_pages/KitchenWhirlpool';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -135,89 +141,110 @@ export default function Navbar() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 w-40 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-2">
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                to="../furniture_pages/FurnitureNobilia" 
-                                element={<FurnitureNobilia/>}
-                                exact
+                                    to="../kitchen_pages/KitchenAeg" 
+                                    element={<KitchenAeg/>}
+                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt1-Konyhai_Eszköz
+                                    Aeg
                                 </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to="../kitchen_pages/KitchenBosch" 
+                                    element={<KitchenBosch/>}
+                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt2-Konyhai_Eszköz
-                                </a>
+                                    Bosch
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to="../kitchen_pages/KitchenElectrolux" 
+                                    element={<KitchenElectrolux/>}
+                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt3-Konyhai_Eszköz
-                                </a>
+                                    Electrolux
+                                </Link>
                             )}
                         </Menu.Item>
-                        <form method="POST" action="#">
                             <Menu.Item>
                                 {({ active }) => (
-                                    <button
-                                        type="submit"
+                                    <Link
+                                        to="../kitchen_pages/KitchenMiele" 
+                                        element={<KitchenMiele/>}
+                                        exact
                                         className={classNames(
                                             active
                                                 ? "bg-gray-100 text-gray-900"
                                                 : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
+                                            "block px-4 py-2 text-center"
                                         )}
                                     >
-                                        Teszt4-Konyhai_eszköz
-                                    </button>
+                                        Miele
+                                    </Link>
                                 )}
                             </Menu.Item>
-                        </form>
-                        <form method="POST" action="#">
                             <Menu.Item>
                                 {({ active }) => (
-                                    <button
-                                        type="submit"
+                                    <Link
+                                        to="../kitchen_pages/KitchenNeff" 
+                                        element={<KitchenNeff/>}
+                                        exact
                                         className={classNames(
                                             active
                                                 ? "bg-gray-100 text-gray-900"
                                                 : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
+                                            "block px-4 py-2 text-center"
                                         )}
                                     >
-                                        Teszt5-Konyhai_eszköz
-                                    </button>
+                                        Neff
+                                    </Link>
                                 )}
                             </Menu.Item>
-                        </form>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <Link
+                                        to="../kitchen_pages/KitchenWhirlpool" 
+                                        element={<KitchenWhirlpool/>}
+                                        exact
+                                        className={classNames(
+                                            active
+                                                ? "bg-gray-100 text-gray-900"
+                                                : "text-gray-700",
+                                            "block w-full px-4 py-2 text-center"
+                                        )}
+                                    >
+                                        Whirlpool
+                                    </Link>
+                                )}
+                            </Menu.Item>
                     </div>
                 </Menu.Items>
             </Transition>
@@ -534,7 +561,6 @@ export default function Navbar() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
