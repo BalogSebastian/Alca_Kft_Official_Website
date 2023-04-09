@@ -4,6 +4,8 @@ import {
   FaInstagram,
   FaPinterest,
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import privacy from '../footer_pages_components/Privacy';
 
 export default function Footer() {
   return (
@@ -20,7 +22,15 @@ export default function Footer() {
         <div className='flex justify-between'>
           <ul className='lg:flex'>
             <li>Rólunk</li>
-            <li>Jogvédelem</li>
+            <li>
+              <Link
+
+                to="../footer_pages_components/privacy" 
+                element={<privacy />}
+              >Jogvédelem
+              </Link>
+
+            </li>
             <li>Partnerek</li>
             <li>Elérhetőség</li>
             <li>Pozicíók</li>

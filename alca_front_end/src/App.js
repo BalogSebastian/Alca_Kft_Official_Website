@@ -26,6 +26,8 @@ import KitchenElectrolux from './kitchen_pages/KitchenElectrolux';
 import KitchenMiele from "./kitchen_pages/KitchenMiele";
 import KitchenNeff from './kitchen_pages/KitchenNeff';
 import KitchenWhirlpool from "./kitchen_pages/KitchenWhirlpool";
+import Privacy from "./footer_pages_components/Privacy";
+import FooterPrivacyNavbar from "./footer_pages_components/FooterPrivacyNavbar";
 
  function App() {
    return (
@@ -34,6 +36,8 @@ import KitchenWhirlpool from "./kitchen_pages/KitchenWhirlpool";
       <Routes>
 
         <Route path="/" element={<><Navbar /> <Hero /> <Furniture /> <Kitchen /> <Kitchen_Accessory /> <Footer /></>} />
+
+        <Route path="/footer_pages_components/privacy" element={<> <FooterPrivacyNavbar/> <Privacy /> <Footer /></>} />
 
         <Route path="/furniture_pages/FurnitureNobilia" element={<> <FurnitureNobiliaNavbarComponent/> <FurnitureNobilia /> <Footer /></>}/>
         <Route path="/furniture_pages/FurnitureAran" element={<> <FurnitureAranNavbarComponent /> <FurnitureAran /><Footer /> </>}/>
@@ -45,7 +49,8 @@ import KitchenWhirlpool from "./kitchen_pages/KitchenWhirlpool";
         <Route path="/kitchen_pages/KitchenElectrolux" element={<> <KitchenElectroluxNavbarComponent /><KitchenElectrolux /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenMiele" element={<> <KitchenMieleNavbarComponent /><KitchenMiele /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenNeff" element={<> <KitchenNeffNavbarComponent /><KitchenNeff /><Footer /></>}/>
-        <Route path="/kitchen_pages/KitchenWhirlpool" element={<> <KitchenWhirlpoolNavbarComponent /><KitchenWhirlpool /><Footer /></>}/>
+        <Route path="/kitchen_pages/KitchenWhirlpool" element={<> <KitchenWhirlpoolNavbarComponent /><KitchenWhirlpool /><Footer /> </> }/>
+ 
 
 
       </Routes>
