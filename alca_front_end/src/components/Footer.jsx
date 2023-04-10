@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import privacy from '../footer_pages_components/Privacy';
+import { BsLungs } from 'react-icons/bs';
 
 export default function Footer() {
   return (
@@ -21,25 +22,32 @@ export default function Footer() {
         </div>
         <div className='flex justify-between'>
           <ul className='lg:flex'>
-            <li>Rólunk</li>
+            <li><Link>Rólunk</Link></li>
             <li>
               <Link
-
                 to="../footer_pages_components/privacy" 
                 element={<privacy />}
               >Jogvédelem
               </Link>
-
             </li>
-            <li>Partnerek</li>
-            <li>Elérhetőség</li>
-            <li>Pozicíók</li>
+            <li>
+              <Link>Partnerek</Link></li>
+            <li><Link>Elérhetőség</Link></li>
+            <li><Link>Pozicíók</Link></li>
           </ul>
           <ul className='text-right lg:flex'>
-            <li>Bemutatkozás</li>
-            <li>Konyhai eszközök</li>
-            <li>Konyhai kiegészítők</li>
-            <li>Bútor katalógus</li>
+            <li>
+              <Link>Bemutatkozás</Link></li>
+            <li>
+              <Link>Konyhai eszközök</Link></li>
+            <li>
+              <Link    
+             >Konyhai kiegészítők</Link></li>
+            <li>
+              <Link
+              >Bútor katalógus 
+              </Link>
+              </li>
           </ul>
         </div>
       </div>

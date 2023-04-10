@@ -1,7 +1,13 @@
 import React from 'react';
-import aran from '../assets/aran.mp4';
+import { useEffect } from 'react';
 
 const Privacy = () =>{
+
+  {/* Itt ugrik az oldal tetejére */}
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className='relative object-cover' style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
       <div className='flex justify-center items-center max-w-[700px] mx-auto w-full p-3 rounded-md text-white'></div>

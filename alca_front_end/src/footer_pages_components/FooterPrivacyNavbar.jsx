@@ -4,13 +4,12 @@ import { BiSearch} from 'react-icons/bi';
 import {AiOutlineClose} from 'react-icons/ai';
 import { HiOutlineMenuAlt4} from 'react-icons/hi';
 import {FaFacebook, FaInstagram, FaPinterest} from 'react-icons/fa';
-import { Fragment } from 'react';
-import { Menu, Transition } from '@headlessui/react';
+import { Menu } from '@headlessui/react';
 import { Link} from "react-router-dom";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ')
+// }
 
 
 export default function FooterPrivacyNavbar(){
@@ -26,7 +25,7 @@ export default function FooterPrivacyNavbar(){
   return (
 
     <Menu>
-    <div className='flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white'>
+    <div className='flex w-full justify-between items-center h-20 px-10 absolute z-10 text-white'>
         <div>
             <h1 onClick={handleNav}  className={logo ? 'hidden' : 'block'}>Alca Kft.</h1>
         </div>
