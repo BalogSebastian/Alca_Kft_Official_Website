@@ -50,7 +50,6 @@
     #search_button_hero_page {
         @apply p-4 rounded-full border shadow-sm shadow-gray-400 
     }
-    
     .icon {
         @apply text-3xl cursor-pointer
     }

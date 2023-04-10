@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import {AiOutlineSearch } from 'react-icons/ai';
 import furniture from "../assets/furniture.mp4";
 import { useNavigate } from 'react-router-dom';
+import Autosuggest from 'react-autosuggest';
 
+const suggestion = ['aran','nobilia','vertex','lube','electrolux','miele','aeg','bosch','neff','whirlpool']
 
 const Hero = ()  => {
 
-    const [searchTerm, setSearchTerm] = useState('');
+    const [value, setValue] = useState('');
     const navigate = useNavigate();
 
-    const handleInputChange = (event) => {
-      setSearchTerm(event.target.value.toLowerCase());
+    const handleInputChange = (event, {newValue}) => {
+      setValue(newValue.toLowerCase());
     };
 
     const handleSearch = (event) => {
       event.preventDefault();
-      switch (searchTerm) {
+      switch (value) {
         case 'aran':
           navigate('/furniture_pages/FurnitureAran');
           break;
@@ -50,7 +52,29 @@ const Hero = ()  => {
           break;
       }
     };
-  
+
+    const getSuggestions = (value ) => {
+      const inputValue = value.toLowerCase();
+      const inputLength = inputValue.length;
+      
+    return inputLength === 0 ? [] : suggestion.filter(
+      (suggestion) => suggestion.toLocaleLowerCase().slice(0,inputLength) === inputValue);
+    };
+
+    const getSuggestionValue = (suggestion) => suggestion;
+
+    const renderSuggestion = (suggestion) => (
+      <div>
+        {suggestion}
+      </div>
+    );
+
+    const inputProps = {
+      placeholder: 'Keress a katalógusból',
+      value,
+      onChange: handleInputChange,
+      className: 'p-4 rounded-full w-[300px] sm:w-[400px] text-black text-sm focus:outline-none',
+    };
   
     const [display, setDisplay] = useState(false);
     const handleHero = () => {
@@ -70,16 +94,16 @@ const Hero = ()  => {
         <h1>Legjobb választék</h1>
         <h2 className='py-2'>Minőség, megbízhatóság és odafigyelés</h2>
         <form className='flex justify-center items-center max-w-[700px] mx-auto w-full p-3 rounded-md'>
+          <Autosuggest
+          suggestions={getSuggestions(value)}
+          onSuggestionsClearRequested={() => {}}
+          onSuggestionsFetchRequested={() => {}}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderSuggestion}
+          inputProps={inputProps}
+        />
           <div>
-          <input 
-          className='p-4 rounded-full w-[300px] sm:w-[400px] text-black text-sm focus:outline-none'
-           type='text'
-            placeholder='Keress a katalógusból'
-            value={searchTerm}
-            onChange={handleInputChange}/> 
-          </div>  
-          <div>
-            <button id='search_button_hero_page' type='submit' onClick={handleSearch}><AiOutlineSearch size={20} className='icon'/></button>
+            <button id='search_button_hero_page' type='submit' onClick={handleSearch} ><AiOutlineSearch size={20} className='icon'/></button>
           </div>
         </form>
     </div>
