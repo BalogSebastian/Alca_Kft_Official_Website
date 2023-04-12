@@ -39,7 +39,7 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                 to='/'
                 exact
                 id="bemutatkozas_dropdown" className='relative inline-block text-left border-b'>
-                    Főoldal
+                    vissza a Főoldalra
                 </Link >
             </div>
             
@@ -49,7 +49,7 @@ export default function KitchenAccessorysGroheNavbarComponent(){
         <Menu as="div" className="relative inline-block text-left">
             <div>
                 <Menu.Button id='konyhai_eszkozok_dropdown' className='border-b'>
-                    Grohe Menüpont 1
+                    Zuhanyzó és termosztátok 
                 </Menu.Button>
             </div>
             <Transition
@@ -65,7 +65,7 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                     <div className="py-2">
                         <Menu.Item>
                             {({ active }) => (
-                                <a
+                                <Link
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -73,13 +73,13 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                                         "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Menüpont 1 Teszt 1
-                                </a>
+                                    FALSÍKON BELÜLI (REJTETT) ZUHANYRENDSZER TERMÉKEK
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
+                                <Link
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -87,13 +87,13 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                                         "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Menüpont 1 Teszt 2
-                                </a>
+                                    Termosztátok
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
+                                <Link
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -101,13 +101,13 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                                         "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Menüpont 1 Teszt 3
-                                </a>
+                                    FALSÍKON KÍVÜLI ZUHANYRENDSZER TERMÉKEK
+                                </Link>
                             )}
                         </Menu.Item>
                             <Menu.Item>
                                 {({ active }) => (
-                                    <button
+                                    <Link
                                         className={classNames(
                                             active
                                                 ? "bg-gray-100 text-gray-900"
@@ -115,9 +115,23 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                                             "block w-full px-4 py-2 text-center"
                                         )}
                                     >
-                                        Menüpont 1 Teszt 4
-                                    </button>
+                                        KÉZIZUHANYOK ÉS ZUHANYSZETTEK
+                                    </Link>
                                 )}
+                            </Menu.Item>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <Link
+                                        className={classNames(
+                                            active
+                                                ? "bg-gray-100 text-gray-900"
+                                                : "text-gray-700",
+                                            "block w-full px-4 py-2 text-center"
+                                        )}
+                                    >
+                                        GROHE ZUHANYOK, A VÍZSZÓRÁS
+                                    </Link>
+                            )}
                             </Menu.Item>
                     </div>
                 </Menu.Items>
@@ -128,7 +142,7 @@ export default function KitchenAccessorysGroheNavbarComponent(){
          <Menu as="div" className="relative inline-block text-left">
             <div>
                 <Menu.Button id='konyhai_eszkozok_dropdown' className='border-b'>
-                    Grohe Menüpont 2
+                    Fürdőszoba kollekcíók
                 </Menu.Button>
             </div>
             <Transition
@@ -144,7 +158,7 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                     <div className="py-2">
                         <Menu.Item>
                             {({ active }) => (
-                                <a
+                                <Link
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -152,27 +166,27 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                                         "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Menüpont 2 Teszt 1
-                                </a>
+                                    GROHE SPA KOLLEKCIÓK
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
+                                <Link
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-center"
+                                              "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Menüpont 2 Teszt 2
-                                </a>
+                                    FÜRDŐSZOBAI CSAPTELEPEK COSMOPOLITAN DESIGN-NAL
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
+                                <Link
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -180,14 +194,158 @@ export default function KitchenAccessorysGroheNavbarComponent(){
                                         "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Menüpont 2 Teszt 3
-                                </a>
+                                    FÜRDŐSZOBAI CSAPTELEPEK KORTÁRS DESIGN-NAL
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    FÜRDŐSZOBAI KIEGÉSZÍTŐK
+                                </Link>
                             )}
                         </Menu.Item>
                     </div>
                 </Menu.Items>
             </Transition>
-        </Menu>                                 
+        </Menu>  
+
+        {/* Kádak és mosdókagylók */}
+         <Menu as="div" className="relative inline-block text-left">
+            <div>
+                <Menu.Button id='konyhai_eszkozok_dropdown' className='border-b'>
+                    Kádak és mosdókagylók
+                </Menu.Button>
+            </div>
+            <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+            >
+                <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className="py-2">
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    GROHE KERÁMIÁK
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    ZUHANYTÁLCÁK
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    ESSENCE FÜRDŐKÁDAINK
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu> 
+
+        {/* Konyhai kollekcíók/csaptelepek */}
+        <Menu as="div" className="relative inline-block text-left">
+            <div>
+                <Menu.Button id='konyhai_eszkozok_dropdown' className='border-b'>
+                    Konyhai kollekcíók/csaptelepek
+                </Menu.Button>
+            </div>
+            <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+            >
+                <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className="py-2">
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Grohe vízszűrő rendszerek
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    GROHE PREMIUM LIFESTYLE KOLLEKCIÓK
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    GROHE PERFORMANCE TERMÉKCSALÁDOK
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu>              
 
         {/* Egy idejig még itt lesz ez a rész, hogy ne legyen baj */}           
 
