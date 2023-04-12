@@ -5,6 +5,8 @@ import Furniture from "./components/Furniture";
 import Kitchen from "./components/Kitchen";
 import Kitchen_Accessory from './components/Kitchen_Accessory';
 import Footer from "./components/Footer";
+import Carousel from "./components/Carousel";
+import FurniturePartnerSliderComponent from "./partner_components/FurniturePartner/FurniturePartnerSliderComponent";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FurnitureNobilia from "./furniture_pages/FurnitureNobilia";
 import FurnitureAran from "./furniture_pages/FurnitureAran";
@@ -28,6 +30,17 @@ import KitchenNeff from './kitchen_pages/KitchenNeff';
 import KitchenWhirlpool from "./kitchen_pages/KitchenWhirlpool";
 import Privacy from "./footer_pages_components/Privacy";
 import FooterPrivacyNavbar from "./footer_pages_components/FooterPrivacyNavbar";
+import KitchenAccessorysBlanco from "./kitchen_accessorys_page/KitchenAccessorysBlanco";
+import KitchenAccessorysDyson from "./kitchen_accessorys_page/KitchenAccessorysDyson";
+import KitchenAccessorysGrohe from "./kitchen_accessorys_page/KitchenAccessorysGrohe";
+import KitchenAccessorysSchock from "./kitchen_accessorys_page/KitchenAccessorysSchock";
+import KitchenAccessorysTekaGlobal from "./kitchen_accessorys_page/KitchenAccessorysTekaGlobal";
+import KitchenAccessorysBlancoNavbarComponent from "./kithcen_accessorys_navbar_components/KitchenAccessorysBlancoNavbarComponent";
+import KitchenAccessorysDysonNavbarComponent from "./kithcen_accessorys_navbar_components/KitchenAccessorysDysonNavbarComponent";
+import KitchenAccessorysGroheNavbarComponent from "./kithcen_accessorys_navbar_components/KitchenAccessorysGroheNavbarComponent";
+import KitchenAccessorysSchockNavbarComponent from "./kithcen_accessorys_navbar_components/KitchenAccessorysSchockNavbarComponent";
+import KitchenAccessorysTekaGlobalNavbarComponent from "./kithcen_accessorys_navbar_components/KitchenAccessorysTekaGlobalNavbarComponent";
+
 
  function App() {
    return (
@@ -35,7 +48,7 @@ import FooterPrivacyNavbar from "./footer_pages_components/FooterPrivacyNavbar";
     <Router>
       <Routes>
 
-        <Route path="/" element={<><Navbar /> <Hero /> <Furniture /> <Kitchen /> <Kitchen_Accessory /> <Footer /></>} />
+        <Route path="/" element={<><Navbar /> <Hero /> <Furniture /> <Kitchen /> <Kitchen_Accessory /> <FurniturePartnerSliderComponent/>  <Footer /></>} /> 
 
         <Route path="/footer_pages_components/privacy" element={<> <FooterPrivacyNavbar/> <Privacy /> <Footer /></>} />
 
@@ -50,8 +63,12 @@ import FooterPrivacyNavbar from "./footer_pages_components/FooterPrivacyNavbar";
         <Route path="/kitchen_pages/KitchenMiele" element={<> <KitchenMieleNavbarComponent /><KitchenMiele /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenNeff" element={<> <KitchenNeffNavbarComponent /><KitchenNeff /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenWhirlpool" element={<> <KitchenWhirlpoolNavbarComponent /><KitchenWhirlpool /><Footer /> </> }/>
- 
 
+        <Route path="/kitchen_accessorys_page/KitchenAccessorysBlanco" element={<> <KitchenAccessorysBlancoNavbarComponent/> <KitchenAccessorysBlanco/> <Footer/> </>}/>
+        <Route path="/kitchen_accessorys_page/KitchenAccessorysDyson" element={<> <KitchenAccessorysDysonNavbarComponent/> <KitchenAccessorysDyson/> <Footer/> </>}/>
+        <Route path="/kitchen_accessorys_page/KitchenAccessorysGrohe" element={<> <KitchenAccessorysGroheNavbarComponent/> <KitchenAccessorysGrohe/> <Footer/> </>}/>
+        <Route path="/kitchen_accessorys_page/KitchenAccessorysSchock" element={<> <KitchenAccessorysSchockNavbarComponent/> <KitchenAccessorysSchock/> <Footer/> </>}/>
+        <Route path="/kitchen_accessorys_page/KitchenAccessorysTekaGlobal" element={<> <KitchenAccessorysTekaGlobalNavbarComponent/> <KitchenAccessorysTekaGlobal/> <Footer/> </>}/>
 
       </Routes>
     </Router>

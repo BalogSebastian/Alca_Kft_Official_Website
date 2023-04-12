@@ -18,12 +18,18 @@ import KitchenElectrolux from '../kitchen_pages/KitchenElectrolux';
 import KitchenMiele from '../kitchen_pages/KitchenMiele';
 import KitchenNeff from '../kitchen_pages/KitchenNeff';
 import KitchenWhirlpool from '../kitchen_pages/KitchenWhirlpool';
+import KitchenAccessorysBlanco from '../kitchen_accessorys_page/KitchenAccessorysBlanco';
+import KitchenAccessorysDyson from '../kitchen_accessorys_page/KitchenAccessorysDyson';
+import KitchenAccessorysGrohe from '../kitchen_accessorys_page/KitchenAccessorysGrohe';
+import KitchenAccessorysSchock from '../kitchen_accessorys_page/KitchenAccessorysSchock';
+import KitchenAccessorysTekaGlobal from '../kitchen_accessorys_page/KitchenAccessorysTekaGlobal';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+
 
     const [nav, setNav ] = useState(false);
     const [logo, setLogo ] = useState(false); 
@@ -46,7 +52,7 @@ export default function Navbar() {
         <Menu as="div" className="relative inline-block text-left">
             <div>
                 <Menu.Button id="bemutatkozas_dropdown" className='border-b'>
-                    Bemutatkozás
+                    Stúdiónk
                 </Menu.Button>
             </div>
             <Transition
@@ -70,37 +76,7 @@ export default function Navbar() {
                                         "block px-4 py-2 text-sm"
                                     )}
                                 >
-                                    Teszt1-Bemutatkozás
-                                </a>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                            {({ active }) => (
-                                <a
-                                    href="#"
-                                    className={classNames(
-                                        active
-                                            ? "bg-gray-100 text-gray-900"
-                                            : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
-                                    )}
-                                >
-                                    Teszt2-Bemutatkozás
-                                </a>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                            {({ active }) => (
-                                <a
-                                    href=""
-                                    className={classNames(
-                                        active
-                                            ? "bg-gray-100 text-gray-900"
-                                            : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
-                                    )}
-                                >
-                                    Teszt3-Bemutatkozás
+                                    Studiónk
                                 </a>
                             )}
                         </Menu.Item>
@@ -116,7 +92,7 @@ export default function Navbar() {
                                             "block w-full text-left px-4 py-2 text-sm"
                                         )}
                                     >
-                                        Teszt4-Bemutatkozás
+                                        Studiónk
                                     </button>
                                 )}
                             </Menu.Item>
@@ -231,6 +207,24 @@ export default function Navbar() {
                             <Menu.Item>
                                 {({ active }) => (
                                     <Link
+                                        to="../kitchen_pages/KitchenLiebher" 
+                                        element={<KitchenNeff/>}
+                                        exact
+                                        className={classNames(
+                                            active
+                                                ? "bg-gray-100 text-gray-900"
+                                                : "text-gray-700",
+                                            "block px-4 py-2 text-center"
+                                        )}
+                                    >
+                                        Liebherr
+                                    </Link>
+                                    
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <Link
                                         to="../kitchen_pages/KitchenWhirlpool" 
                                         element={<KitchenWhirlpool/>}
                                         exact
@@ -265,156 +259,94 @@ export default function Navbar() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 w-40 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-2">
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                to="../kitchen_accessorys_page/KitchenAccessorysBlanco" 
+                                element={<KitchenAccessorysBlanco/>}
+                                exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt1-Konyhai_Kiegészitők
-                                </a>
+                                    Blanco
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to="../kitchen_accessorys_page/KitchenAccessorysDyson" 
+                                    element={<KitchenAccessorysDyson/>}
+                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt2-Konyhai_Kiegészitők
-                                </a>
+                                    Dyson
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
-                                <a
-                                    href="#"
+                                <Link
+                                    to="../kitchen_accessorys_page/KitchenAccessorysGrohe" 
+                                    element={<KitchenAccessorysGrohe/>}
+                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Teszt3-Konyhai_Kiegészitők
-                                </a>
+                                    Grohe
+                                </Link>
                             )}
                         </Menu.Item>
-                        <form method="POST" action="#">
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    to="../kitchen_accessorys_page/KitchenAccessorysSchock" 
+                                    element={<KitchenAccessorysSchock/>}
+                                    exact
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Schock
+                                </Link>
+                            )}
+                        </Menu.Item>
                             <Menu.Item>
                                 {({ active }) => (
-                                    <button
-                                        type="submit"
+                                    <Link
+                                    to="../kitchen_accessorys_page/KitchenAccessorysTekaGlobal" 
+                                    element={<KitchenAccessorysTekaGlobal/>}
+                                    exact
                                         className={classNames(
                                             active
                                                 ? "bg-gray-100 text-gray-900"
                                                 : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
+                                            "block w-full px-4 py-2 text-center"
                                         )}
                                     >
-                                        Teszt4-Konyhai_Kiegészitők
-                                    </button>
+                                        Teka
+                                    </Link>
                                 )}
                             </Menu.Item>
-                        </form>
-                        <form method="POST" action="#">
-                            <Menu.Item>
-                                {({ active }) => (
-                                    <button
-                                        type="submit"
-                                        className={classNames(
-                                            active
-                                                ? "bg-gray-100 text-gray-900"
-                                                : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
-                                        )}
-                                    >
-                                        Teszt5-Konyhai_Kiegészitők
-                                    </button>
-                                )}
-                            </Menu.Item>
-                        </form>
-                        <form method="POST" action="#">
-                            <Menu.Item>
-                                {({ active }) => (
-                                    <button
-                                        type="submit"
-                                        className={classNames(
-                                            active
-                                                ? "bg-gray-100 text-gray-900"
-                                                : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
-                                        )}
-                                    >
-                                        Teszt6-Konyhai_Kiegészitők
-                                    </button>
-                                )}
-                            </Menu.Item>
-                        </form>
-                        <form method="POST" action="#">
-                            <Menu.Item>
-                                {({ active }) => (
-                                    <button
-                                        type="submit"
-                                        className={classNames(
-                                            active
-                                                ? "bg-gray-100 text-gray-900"
-                                                : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
-                                        )}
-                                    >
-                                        Teszt7-Konyhai_Kiegészitők
-                                    </button>
-                                )}
-                            </Menu.Item>
-                        </form>
-                        <form method="POST" action="#">
-                            <Menu.Item>
-                                {({ active }) => (
-                                    <button
-                                        type="submit"
-                                        className={classNames(
-                                            active
-                                                ? "bg-gray-100 text-gray-900"
-                                                : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
-                                        )}
-                                    >
-                                        Teszt8-Konyhai_Kiegészitők
-                                    </button>
-                                )}
-                            </Menu.Item>
-                        </form>
-                        <form method="POST" action="#">
-                            <Menu.Item>
-                                {({ active }) => (
-                                    <button
-                                        type="submit"
-                                        className={classNames(
-                                            active
-                                                ? "bg-gray-100 text-gray-900"
-                                                : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
-                                        )}
-                                    >
-                                        Teszt9-Konyhai_Kiegészitők
-                                    </button>
-                                )}
-                            </Menu.Item>
-                        </form>
-                    </div>
+                      </div>
                 </Menu.Items>
             </Transition>
         </Menu>
@@ -492,7 +424,7 @@ export default function Navbar() {
                                     <Link
                                         to="../furniture_pages/FurnitureVertex" 
                                         element={<FurnitureVertex/>}
-                                        xact
+                                        exact
                                         className={classNames(
                                             active
                                                 ? "bg-gray-100 text-gray-900"

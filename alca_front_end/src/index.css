@@ -12,7 +12,7 @@
 @layer base {
 
     #bemutatkozas_dropdown {
-        @apply p-4 font-bold md:ml-4
+        @apply p-4 font-bold md:ml-4 
     }
     #konyhai_eszkozok_dropdown {
         @apply p-4 font-bold md:ml-4
@@ -28,8 +28,8 @@
     }
 
     body {
-        @apply font-[Lato]
-    }
+        @apply font-[Lato]  
+    } 
 
     li {
         @apply p-4 font-bold
