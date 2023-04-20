@@ -3,6 +3,7 @@ import {AiOutlineSearch } from 'react-icons/ai';
 import furniture from "../assets/furniture.mp4";
 import { useNavigate } from 'react-router-dom';
 import Autosuggest from 'react-autosuggest';
+import main_page_furniture_video from '../assets/main_page_furniture_video.mp4';
 
 const suggestion = ['aran','nobilia','vertex','lube','electrolux','miele','aeg','bosch','neff','whirlpool']
 
@@ -83,9 +84,9 @@ const Hero = ()  => {
 
   return (
     <div
-    className='w-full h-screen relative'>
-    <video className='w-full h-full object-cover'
-     src={furniture}
+    className='w-full h-96vh relative'>
+    <video className='w-full object-cover' style={{ height: '50rem'}}
+     src={main_page_furniture_video}
       autoPlay
        loop
         muted/>

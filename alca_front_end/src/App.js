@@ -7,6 +7,7 @@ import Kitchen_Accessory from './components/Kitchen_Accessory';
 import Footer from "./components/Footer";
 import AboutPage from "./components/AboutPage";
 import Carousel from "./components/Carousel";
+import Navbar_Header from "./components/Navbar_Header";
 import FurniturePartnerSliderComponent from "./partner_components/FurniturePartner/FurniturePartnerSliderComponent";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FurnitureNobilia from "./furniture_pages/FurnitureNobilia";
@@ -52,7 +53,7 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
     <Router>
       <Routes>
 
-        <Route path="/" element={<><Navbar /> <Hero /> <Furniture /> <Kitchen /> <Kitchen_Accessory /> <AboutPage/> <FurniturePartnerSliderComponent/>  <Footer /></>} /> 
+        <Route path="/" element={<> <Navbar_Header/> <Navbar /> <Hero /> <Furniture /> <Kitchen /> <Kitchen_Accessory /> <AboutPage/> <FurniturePartnerSliderComponent/>  <Footer /></>} /> 
 
         <Route path="/footer_pages_components/privacy" element={<> <FooterPrivacyNavbar/> <Privacy /> <Footer /></>} />
 
