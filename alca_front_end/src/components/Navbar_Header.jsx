@@ -16,8 +16,10 @@ const Navbar_Header = () => {
             <img src={alca_logo} alt='' className='w-16 h-auto ml-4' />
         </div>
         <div className='flex'>
-        <Link className='hidden md:flex  items-center px-3'>
+        <Link className='hidden md:flex  items-center px-3'
+        to='/'>
             <HiOutlineHome className='mr-2' size={30}/>
+            
                 <p className='text-2xl font-extrabold text-gray-700'>Főoldal</p>
             </Link>
             <Link className='hidden md:flex  items-center px-3'>

@@ -53,7 +53,7 @@ const KitchenAccessorysNavbarSecondMainComponent = () => {
                     <div className="py-2">
                         <Menu.Item>
                             {({ active }) => (
-                                <a
+                                <Link
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -62,7 +62,7 @@ const KitchenAccessorysNavbarSecondMainComponent = () => {
                                     )}
                                 >
                                     Menüpont 1 Teszt 1
-                                </a>
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
