@@ -91,7 +91,7 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                           <KitchenAccessorysMainKonyhamalacComponent/>
                             <KitchenAccessorysSliderComponent/>
                               <Footer/> </>} />
-            <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent"element={<> 
+            <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent" element={<> 
               <Navbar_Header/>  
                 <KitchenAccessorysNavbarMainCsaptelepComponent />
                   <KitchenAccessorysNavbarSecondMainComponent/>
@@ -104,7 +104,7 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                               <KitchenAccessorysMainKonyhamalacComponent/>
                                 <KitchenAccessorysSliderComponent/>
                                   <Footer/> </>} />
-            <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent"element={<> 
+            <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent" element={<> 
               <Navbar_Header/>  
                 <KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent />
                   <KitchenAccessorysNavbarSecondMainComponent/>
@@ -117,7 +117,7 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                               <KitchenAccessorysMainKonyhamalacComponent/>
                                 <KitchenAccessorysSliderComponent/>
                                   <Footer/> </>} />
-              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainViztisztitoComponent"element={<> 
+              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainViztisztitoComponent" element={<> 
                 <Navbar_Header/>  
                   <KitchenAccessorysNavbarMainViztisztitoComponent />
                     <KitchenAccessorysNavbarSecondMainComponent/>
@@ -130,7 +130,7 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                                   <KitchenAccessorysMainKonyhamalacComponent/>
                                     <KitchenAccessorysSliderComponent/>
                                       <Footer/> </>} /> 
-              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent"element={<> 
+              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent" element={<> 
                 <Navbar_Header/>  
                   <KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent />
                     <KitchenAccessorysNavbarSecondMainComponent/>
@@ -143,7 +143,7 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                                   <KitchenAccessorysMainKonyhamalacComponent/>
                                     <KitchenAccessorysSliderComponent/>
                                       <Footer/> </>} />
-              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainKonyhamalacComponent"element={<> 
+              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainKonyhamalacComponent" element={<> 
                 <Navbar_Header/>  
                   <KitchenAccessorysNavbarMainKonyhamalacComponent />
                     <KitchenAccessorysNavbarSecondMainComponent/>
@@ -157,7 +157,7 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                                     <KitchenAccessorysSliderComponent/>
                                       <Footer/> </>} />
               {/*This is the KitchenAccessorys FooterPage button */}
-              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainFooterComponent"element={<> 
+              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainFooterComponent" element={<> 
                 <Navbar_Header/>  
                   <KitchenAccessorysNavbarMainFooterComponent />
                     <KitchenAccessorysNavbarSecondMainComponent/>

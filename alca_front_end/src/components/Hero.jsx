@@ -5,7 +5,11 @@ import { useNavigate } from 'react-router-dom';
 import Autosuggest from 'react-autosuggest';
 import main_page_furniture_video from '../assets/main_page_furniture_video.mp4';
 
-const suggestion = ['aran','nobilia','vertex','lube','electrolux','miele','aeg','bosch','neff','whirlpool']
+const suggestion = ['aran','nobilia','vertex','lube',
+'electrolux','miele','aeg','bosch',
+'neff','whirlpool','konyhamalac',
+'mosogatótálcák','csaptelepek','mosogatószer adagolók',
+'víztisztitók','beépített szemméttárolók']
 
 const Hero = ()  => {
 
@@ -19,6 +23,24 @@ const Hero = ()  => {
     const handleSearch = (event) => {
       event.preventDefault();
       switch (value) {
+        case 'mosogatótálcák':
+          navigate('/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoMedenceComponent');
+          break;
+        case 'csaptelepek':
+          navigate('/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent');
+          break;
+        case 'mosogatószer adagolók':
+          navigate('/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent');
+          break;
+        case 'víztisztitók':
+          navigate('/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainViztisztitoComponent');
+          break;
+        case 'beépített szemméttárolók':
+          navigate('/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent');
+          break;
+        case 'konyhamalac':
+          navigate('/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainKonyhamalacComponent');
+          break;
         case 'aran':
           navigate('/furniture_pages/FurnitureAran');
           break;
