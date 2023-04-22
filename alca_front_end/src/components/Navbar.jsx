@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useRef } from 'react';
 import { BsPerson } from 'react-icons/bs';
 import { BiSearch} from 'react-icons/bi';
 import {AiOutlineClose} from 'react-icons/ai';
@@ -18,11 +19,9 @@ import KitchenElectrolux from '../kitchen_pages/KitchenElectrolux';
 import KitchenMiele from '../kitchen_pages/KitchenMiele';
 import KitchenNeff from '../kitchen_pages/KitchenNeff';
 import KitchenWhirlpool from '../kitchen_pages/KitchenWhirlpool';
-import KitchenAccessorysBlanco from '../kitchen_accessorys_page/KitchenAccessorysBlanco';
-import KitchenAccessorysDyson from '../kitchen_accessorys_page/KitchenAccessorysDyson';
-import KitchenAccessorysGrohe from '../kitchen_accessorys_page/KitchenAccessorysGrohe';
 import KitchenAccessorysSchock from '../kitchen_accessorys_page/KitchenAccessorysSchock';
 import KitchenAccessorysTekaGlobal from '../kitchen_accessorys_page/KitchenAccessorysTekaGlobal';
+import KitchenAccessorysNavbarMainComponent from '../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -30,6 +29,14 @@ function classNames(...classes) {
 
 export default function Navbar() {
 
+    const csaptelepRef = useRef(null);
+
+    const [isCsaptelepFocused, setIsCsaptelepFocused] = useState(false);
+    
+    function handleCsaptelepClick(event) {
+        event.preventDefault();
+        setIsCsaptelepFocused(true);
+      }
 
     const [nav, setNav ] = useState(false);
     const [logo, setLogo ] = useState(false); 
@@ -40,19 +47,19 @@ export default function Navbar() {
   return (
 
     <Menu>
-    <div className='flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white'>
+    {/*<div className='flex w-full justify-between text items-center h-20 px-4 absolute z-10 text-white'>*/}
+    <div className='flex w-full justify-between text-center items-center h-20 px-4 py-4 absolute mt-4 z-10 text-white'>
         <div>
-            <h1 onClick={handleNav}  className={logo ? 'hidden' : 'block'}>Alca Kft.</h1>
+            <h1 onClick={handleNav}  className={logo ? 'hidden relative' : 'block relative'}></h1>
         </div>
         <ul className='hidden md:flex'>
 
-        {/* Itt található a header-ön lévő elemek plsuz a dropdown-jai */}
+       
 
-        {/* Bemutatkozás */}
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block text-left ml-6">
             <div>
-                <Menu.Button id="bemutatkozas_dropdown" className='border-b'>
-                    Stúdiónk
+                <Menu.Button id="butor_katalogus_dropdown" className='border-b'>
+                    Konyhabútorok
                 </Menu.Button>
             </div>
             <Transition
@@ -64,39 +71,93 @@ export default function Navbar() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
                 >
-                <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 w-40 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
                         <Menu.Item>
                             {({ active }) => (
-                                <a
+                                <Link
+                                to="../furniture_pages/FurnitureNobilia" 
+                                element={<FurnitureNobilia/>}
+                                exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
+                                        "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Studiónk
-                                </a>
+                                    Nobilia
+                                </Link>
                             )}
                         </Menu.Item>
-                        <form method="POST" action="#">
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    to="../furniture_pages/FurnitureAran" 
+                                    element={<FurnitureAran/>}
+                                    exact
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Aran
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    to="../furniture_pages/FurnitureLube" 
+                                    element={<FurnitureLube/>}
+                                    exact
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Lube
+                                </Link>
+                            )}
+                        </Menu.Item>
                             <Menu.Item>
                                 {({ active }) => (
-                                    <button
-                                        type="submit"
+                                    <Link
+                                        to="../furniture_pages/FurnitureVertex" 
+                                        element={<FurnitureVertex/>}
+                                        exact
                                         className={classNames(
                                             active
                                                 ? "bg-gray-100 text-gray-900"
                                                 : "text-gray-700",
-                                            "block w-full text-left px-4 py-2 text-sm"
+                                            "block px-4 py-2 text-center"
                                         )}
                                     >
-                                        Studiónk
-                                    </button>
+                                        Vertex
+                                    </Link>
                                 )}
                             </Menu.Item>
-                        </form>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <Link
+                                        to="../furniture_pages/FurnitureVertex" 
+                                        element={<FurnitureVertex/>}
+                                        exact
+                                        className={classNames(
+                                            active
+                                                ? "bg-gray-100 text-gray-900"
+                                                : "text-gray-700",
+                                            "block w-full px-4 py-2 text-center"
+                                        )}
+                                    >
+                                        Creo
+                                    </Link>
+                                )}
+                            </Menu.Item>
                     </div>
                 </Menu.Items>
             </Transition>
@@ -105,7 +166,7 @@ export default function Navbar() {
         <Menu as="div" className="relative inline-block text-left">
             <div>
                 <Menu.Button id='konyhai_eszkozok_dropdown' className='border-b'>
-                    Konyhai eszközök
+                    Konyhai gépek
                 </Menu.Button>
             </div>
             <Transition
@@ -243,6 +304,99 @@ export default function Navbar() {
                 </Menu.Items>
             </Transition>
         </Menu>
+
+        {/* Konyhai nagygépek */}
+        <Menu as="div" className="relative inline-block text-left">
+            <div>
+                <Menu.Button id="bemutatkozas_dropdown" className='border-b'>
+                    Konyhai nagygépek
+                </Menu.Button>
+            </div>
+            <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+                >
+                <Menu.Items className="absolute right-0 w-40 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className="py-1">
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Mosógép
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Szárítógép
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Mángorló
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Porszívok
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block w-full px-4 py-2 text-center"
+                                    )}
+                                >
+                                    Thermomix
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu>
         {/* Konyhai kiegészítők */}                                  
         <Menu as="div" className="relative inline-block text-left">
             <div>
@@ -261,11 +415,11 @@ export default function Navbar() {
             >
                 <Menu.Items className="absolute right-0 w-40 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-2">
+
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                to="../kitchen_accessorys_page/KitchenAccessorysBlanco" 
-                                element={<KitchenAccessorysBlanco/>}
+                                to="../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoMedenceComponent#mosogatomedence" 
                                 exact
                                     className={classNames(
                                         active
@@ -273,16 +427,22 @@ export default function Navbar() {
                                             : "text-gray-700",
                                         "block px-4 py-2 text-center"
                                     )}
+                                    onClick={() => {
+                                        const element = document.getElementById("mosogatomedence");
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: "smooth" });
+                                        }
+                                      }}
                                 >
-                                    Blanco
+                                    Mosogatótálcák
                                 </Link>
                             )}
                         </Menu.Item>
+
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to="../kitchen_accessorys_page/KitchenAccessorysDyson" 
-                                    element={<KitchenAccessorysDyson/>}
+                                     to="../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent#csaptelep" 
                                     exact
                                     className={classNames(
                                         active
@@ -290,16 +450,22 @@ export default function Navbar() {
                                             : "text-gray-700",
                                         "block px-4 py-2 text-center"
                                     )}
+                                    onClick={() => {
+                                        const element = document.getElementById("csaptelep");
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: "smooth" });
+                                        }
+                                      }}
                                 >
-                                    Dyson
+                                    Csaptelepek
                                 </Link>
                             )}
                         </Menu.Item>
+
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to="../kitchen_accessorys_page/KitchenAccessorysGrohe" 
-                                    element={<KitchenAccessorysGrohe/>}
+                                to="../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent#mosogatoszeradagolo"  
                                     exact
                                     className={classNames(
                                         active
@@ -307,15 +473,44 @@ export default function Navbar() {
                                             : "text-gray-700",
                                         "block px-4 py-2 text-center"
                                     )}
+                                    onClick={() => {
+                                        const element = document.getElementById("mosogatoszeradagolo");
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: "smooth" });
+                                        }
+                                      }}
                                 >
-                                    Grohe
+                                    Mosogatószer adagolók
+                                </Link>
+                            )}
+                        </Menu.Item>
+
+                        <Menu.Item>
+                            {({ active }) => (
+                                <Link
+                                to="../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainViztisztitoComponent#viztisztito"
+                                    exact
+                                    className={classNames(
+                                        active
+                                            ? "bg-gray-100 text-gray-900"
+                                            : "text-gray-700",
+                                        "block px-4 py-2 text-center"
+                                    )}
+                                    onClick={() => {
+                                        const element = document.getElementById("viztisztito");
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: "smooth" });
+                                        }
+                                      }}
+                                >
+                                    Víztisztitók
                                 </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to="../kitchen_accessorys_page/KitchenAccessorysSchock" 
+                                    to="../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent#beepitettszemettarolo" 
                                     element={<KitchenAccessorysSchock/>}
                                     exact
                                     className={classNames(
@@ -324,16 +519,22 @@ export default function Navbar() {
                                             : "text-gray-700",
                                         "block px-4 py-2 text-center"
                                     )}
+                                    onClick={() => {
+                                        const element = document.getElementById("beepitettszemettarolo");
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: "smooth" });
+                                        }
+                                      }}
                                 >
-                                    Schock
+                                    Beépített szemméttárolók
                                 </Link>
                             )}
                         </Menu.Item>
+
                             <Menu.Item>
                                 {({ active }) => (
                                     <Link
-                                    to="../kitchen_accessorys_page/KitchenAccessorysTekaGlobal" 
-                                    element={<KitchenAccessorysTekaGlobal/>}
+                                    to="../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainKonyhamalacComponent#konyhamalac" 
                                     exact
                                         className={classNames(
                                             active
@@ -341,8 +542,14 @@ export default function Navbar() {
                                                 : "text-gray-700",
                                             "block w-full px-4 py-2 text-center"
                                         )}
+                                        onClick={() => {
+                                            const element = document.getElementById("konyhamalac");
+                                            if (element) {
+                                              element.scrollIntoView({ behavior: "smooth" });
+                                            }
+                                          }}
                                     >
-                                        Teka
+                                        Konyhamalac
                                     </Link>
                                 )}
                             </Menu.Item>
@@ -350,11 +557,12 @@ export default function Navbar() {
                 </Menu.Items>
             </Transition>
         </Menu>
-        {/* Bútor katalógus */}                                   
+       
+       {/* Munkalap megoldások */}
         <Menu as="div" className="relative inline-block text-left">
             <div>
-                <Menu.Button id="butor_katalogus_dropdown" className='border-b'>
-                    Bútor katalógus
+                <Menu.Button id="bemutatkozas_dropdown" className='border-b'>
+                    Munkalap megoldások
                 </Menu.Button>
             </div>
             <Transition
@@ -366,14 +574,11 @@ export default function Navbar() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
                 >
-                <Menu.Items className="absolute right-0 w-40 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 w-44 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
-                        <Menu.Item>
+                    <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                to="../furniture_pages/FurnitureNobilia" 
-                                element={<FurnitureNobilia/>}
-                                exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -381,16 +586,13 @@ export default function Navbar() {
                                         "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Nobilia
+                                    Laminált
                                 </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to="../furniture_pages/FurnitureAran" 
-                                    element={<FurnitureAran/>}
-                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -398,16 +600,13 @@ export default function Navbar() {
                                         "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Aran
+                                    Nedit
                                 </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to="../furniture_pages/FurnitureLube" 
-                                    element={<FurnitureLube/>}
-                                    exact
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
@@ -415,16 +614,14 @@ export default function Navbar() {
                                         "block px-4 py-2 text-center"
                                     )}
                                 >
-                                    Lube
+                                    Silestone
                                 </Link>
                             )}
                         </Menu.Item>
                             <Menu.Item>
                                 {({ active }) => (
-                                    <Link
-                                        to="../furniture_pages/FurnitureVertex" 
-                                        element={<FurnitureVertex/>}
-                                        exact
+                                    <button
+                                        type="submit"
                                         className={classNames(
                                             active
                                                 ? "bg-gray-100 text-gray-900"
@@ -432,118 +629,45 @@ export default function Navbar() {
                                             "block w-full px-4 py-2 text-center"
                                         )}
                                     >
-                                        Vertex
-                                    </Link>
+                                        Dekton
+                                    </button>
                                 )}
                             </Menu.Item>
                     </div>
                 </Menu.Items>
             </Transition>
         </Menu>
-        {/* Elérhetőség */} 
-        <Menu as="div" className="relative inline-block text-left">
-            <div>
-                <Menu.Button id="elerhetoseg_dropdown" className='border-b'>
-                Elérhetőség
-                </Menu.Button>
-            </div>
-            <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-                >
-                <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div className="py-1">
-                    <form method="POST" action="#">
-                        <Menu.Item>
-                            {({ active }) => (
-                                <a
-                                    href="#"
-                                    className={classNames(
-                                        active
-                                            ? "bg-gray-100 text-gray-900"
-                                            : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
-                                    )}
-                                >
-                                    Teszt1-Elérhetőség
-                                </a>
-                            )}
-                        </Menu.Item>
-                        </form>
-                        <Menu.Item>
-                            {({ active }) => (
-                                <a
-                                    href="#"
-                                    className={classNames(
-                                        active
-                                            ? "bg-gray-100 text-gray-900"
-                                            : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
-                                    )}
-                                >
-                                    Teszt1-Elérhetőség
-                                </a>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                            {({ active }) => (
-                                <a
-                                    className={classNames(
-                                        active
-                                            ? "bg-gray-100 text-gray-900"
-                                            : "text-gray-700",
-                                        "block px-4 py-2 text-sm"
-                                    )}
-                                >
-                                    Teszt1-Elérhetőség
-                                </a>
-                            )}
-                        </Menu.Item>
-                    </div>
-                </Menu.Items>
-            </Transition>
-        </Menu>
-
-        {/* Egy idejig még itt lesz ez a rész, hogy ne legyen baj */}                                
-
-        {/* <button id='bemutatkozas_dropdown'
-         data-dropdown-toogle='dropdown_1'
-          className='border-b'>Bemutatkozás</button>
-        <button id='konyhai_eszkozok_dropdown' data-dropdown-toogle='dropdown_2' className='border-b'>Konyhai eszközök</button>
-        <button id='konyhai_kiegeszitok_dropdown' data-dropdown-toogle='dropdown_3' className='border-b'>Konyhai kiegészitők</button>
-        <button id='butor_katalogus_dropdown' data-dropdown-toogle='dropdown_4' className='border-b'>Bútor katalógus</button>
-        <button id='elerhetoseg_dropdown' data-dropdown-toogle='dropdown_5' className='border-b'>Elérhetőség</button>*/}
-        
+       
         </ul>
-        <div className='hidden md:flex'>
+         <div className='hidden md:flex'>
             <BiSearch className='mr-2' size={25}/>
             <BsPerson size={25}/>
-        </div>
+        </div> 
 
          {/* Hamburger menü */}
 
-        <div onClick={handleNav} className='md:hidden z-10'>
-            {nav ? <AiOutlineClose className='text-black' size={20}/> : <HiOutlineMenuAlt4 size={20}/>}
-        </div>
+        <div onClick={handleNav} className='md:hidden z-10 flex justify-end'>
+            {nav ? <AiOutlineClose className='text-black' size={45}/> : <HiOutlineMenuAlt4 size={45}/>}
+        </div> 
+
+
+
+
+
 
         {/* Telefon menü mód */}
 
         <div onClick={handleNav} className={nav ? 'absolute text-black left-0 top-0 w-full bg-gray-200/90 px-14 py-10 flex flex-col' : 'absolute left-[-100%]'}>
             <ul>
-                <h1>Alca Kft.</h1>  
-                <li className='border-b'>Főoldal</li>
-                <li className='border-b'>Konyhai eszközök</li>
+                <h1 className='mt-6'>Alca Konyhabútor Stúdió.</h1>  
+                <li className='border-b'>Konyhabútorok</li>
+                <li className='border-b'>Konyhai gépek</li>
+                <li className='border-b'>Konyhai nagygépek</li>
                 <li className='border-b'>Konyhai kiegészitők</li>
-                <li className='border-b'>Bútor katalógus</li>
-                <li className='border-b'>Elérhetőség</li>
+                <li className='border-b'>Munkalap megoldások</li>
                 <div className='flex flex-col'>
-                    <button className='my-6'>Keresés</button>
-                    <button>Fiók</button>
+                    <button className='my-6 text-xl'>Keresés</button>
+                    <button className='text-xl'>Fiók</button>
                 </div>
                 <div className='flex justify-between my-8'>
                     <FaFacebook className='icon'/>
