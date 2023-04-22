@@ -6,9 +6,12 @@ import Kitchen from "./components/Kitchen";
 import Kitchen_Accessory from './components/Kitchen_Accessory';
 import Footer from "./components/Footer";
 import AboutPage from "./components/AboutPage";
-import Carousel from "./components/Carousel";
 import Navbar_Header from "./components/Navbar_Header";
+import Carousel from "./components/Carousel";
+
 import FurniturePartnerSliderComponent from "./partner_components/FurniturePartner/FurniturePartnerSliderComponent";
+import KitchenAccessorysSliderComponent from "./partner_components/KitchenAccessorysSliderBaseComponent.jsx/KitchenAccessorysSliderComponent";
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FurnitureNobilia from "./furniture_pages/FurnitureNobilia";
 import FurnitureAran from "./furniture_pages/FurnitureAran";
@@ -31,6 +34,23 @@ import KitchenMiele from "./kitchen_pages/KitchenMiele";
 import KitchenNeff from './kitchen_pages/KitchenNeff';
 import KitchenWhirlpool from "./kitchen_pages/KitchenWhirlpool";
 import Privacy from "./footer_pages_components/Privacy";
+
+//KitchenAccessorysViewPage
+import KitchenAccessorysNavbarMainCsaptelepComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent";
+import KitchenAccessorysNavbarMainMosogatoMedenceComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoMedenceComponent";
+import KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent";
+import KitchenAccessorysNavbarMainViztisztitoComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainViztisztitoComponent";
+import KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent";
+import KitchenAccessorysNavbarMainKonyhamalacComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainKonyhamalacComponent";
+import KitchenAccessorysNavbarMainFooterComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainFooterComponent";
+import KitchenAccessorysNavbarSecondMainComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarSecondMainComponent";
+import KitchenAccessorysMainMosogatomedenceComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysMainMosogatomedenceComponent";
+import KitchenAccessorysMainCsaptelepComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysMainCsaptelepComponent";
+import KitchenAccessorysMainMosogatoszerAdagolokComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysMainMosogatoszerAdagolokComponent";
+import KitchenAccessorysMainViztisztitokComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysMainViztisztitokComponent";
+import KitchenAccessorysMainBeepitettSzemmettarolokComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysMainBeepitettSzemmettarolokComponent";
+import KitchenAccessorysMainKonyhamalacComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysMainKonyhamalacComponent";
+
 import FooterPrivacyNavbar from "./footer_pages_components/FooterPrivacyNavbar";
 import KitchenAccessorysBlanco from "./kitchen_accessorys_page/KitchenAccessorysBlanco";
 import KitchenAccessorysDyson from "./kitchen_accessorys_page/KitchenAccessorysDyson";
@@ -47,6 +67,7 @@ import GrogeSecondPhotoBlock from "./page_components/kitchen_accessorys/grohe_pa
 import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe_page_components/GroheHeroSearchComponent";
 
 
+
  function App() {
    return (
 
@@ -54,8 +75,102 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
       <Routes>
 
         <Route path="/" element={<> <Navbar_Header/> <Navbar /> <Hero /> <Furniture /> <Kitchen /> <Kitchen_Accessory /> <AboutPage/> <FurniturePartnerSliderComponent/>  <Footer /></>} /> 
-
         <Route path="/footer_pages_components/privacy" element={<> <FooterPrivacyNavbar/> <Privacy /> <Footer /></>} />
+
+          {/* Here are the kitchen Accessorys components */}
+          <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoMedenceComponent" element={<> 
+          <Navbar_Header/>  
+            <KitchenAccessorysNavbarMainMosogatoMedenceComponent />
+              <KitchenAccessorysNavbarSecondMainComponent/>
+                <KitchenAccessorysMainMosogatomedenceComponent 
+                  id="mosogatomedence"/>
+                   <KitchenAccessorysMainCsaptelepComponent/>
+                    <KitchenAccessorysMainMosogatoszerAdagolokComponent/>
+                      <KitchenAccessorysMainViztisztitokComponent/>
+                        <KitchenAccessorysMainBeepitettSzemmettarolokComponent/>
+                          <KitchenAccessorysMainKonyhamalacComponent/>
+                            <KitchenAccessorysSliderComponent/>
+                              <Footer/> </>} />
+            <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent"element={<> 
+              <Navbar_Header/>  
+                <KitchenAccessorysNavbarMainCsaptelepComponent />
+                  <KitchenAccessorysNavbarSecondMainComponent/>
+                    <KitchenAccessorysMainMosogatomedenceComponent />
+                      <KitchenAccessorysMainCsaptelepComponent
+                        id="csaptelep"/>
+                        <KitchenAccessorysMainMosogatoszerAdagolokComponent/>
+                          <KitchenAccessorysMainViztisztitokComponent/>
+                            <KitchenAccessorysMainBeepitettSzemmettarolokComponent/>
+                              <KitchenAccessorysMainKonyhamalacComponent/>
+                                <KitchenAccessorysSliderComponent/>
+                                  <Footer/> </>} />
+            <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent"element={<> 
+              <Navbar_Header/>  
+                <KitchenAccessorysNavbarMainMosogatoszerAdagoloComponent />
+                  <KitchenAccessorysNavbarSecondMainComponent/>
+                    <KitchenAccessorysMainMosogatomedenceComponent />
+                      <KitchenAccessorysMainCsaptelepComponent/>
+                        <KitchenAccessorysMainMosogatoszerAdagolokComponent
+                        id="mosogatoszeradagolo"/>
+                          <KitchenAccessorysMainViztisztitokComponent/>
+                            <KitchenAccessorysMainBeepitettSzemmettarolokComponent/>
+                              <KitchenAccessorysMainKonyhamalacComponent/>
+                                <KitchenAccessorysSliderComponent/>
+                                  <Footer/> </>} />
+              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainViztisztitoComponent"element={<> 
+                <Navbar_Header/>  
+                  <KitchenAccessorysNavbarMainViztisztitoComponent />
+                    <KitchenAccessorysNavbarSecondMainComponent/>
+                      <KitchenAccessorysMainMosogatomedenceComponent />
+                        <KitchenAccessorysMainCsaptelepComponent/>
+                          <KitchenAccessorysMainMosogatoszerAdagolokComponent/>
+                            <KitchenAccessorysMainViztisztitokComponent
+                              id="viztisztito"/>
+                                <KitchenAccessorysMainBeepitettSzemmettarolokComponent/>
+                                  <KitchenAccessorysMainKonyhamalacComponent/>
+                                    <KitchenAccessorysSliderComponent/>
+                                      <Footer/> </>} /> 
+              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent"element={<> 
+                <Navbar_Header/>  
+                  <KitchenAccessorysNavbarMainBeepitettSzemettaroloComponent />
+                    <KitchenAccessorysNavbarSecondMainComponent/>
+                      <KitchenAccessorysMainMosogatomedenceComponent />
+                        <KitchenAccessorysMainCsaptelepComponent/>
+                          <KitchenAccessorysMainMosogatoszerAdagolokComponent/>
+                            <KitchenAccessorysMainViztisztitokComponent/>
+                              <KitchenAccessorysMainBeepitettSzemmettarolokComponent
+                                id="beepitettszemettarolo"/>
+                                  <KitchenAccessorysMainKonyhamalacComponent/>
+                                    <KitchenAccessorysSliderComponent/>
+                                      <Footer/> </>} />
+              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainKonyhamalacComponent"element={<> 
+                <Navbar_Header/>  
+                  <KitchenAccessorysNavbarMainKonyhamalacComponent />
+                    <KitchenAccessorysNavbarSecondMainComponent/>
+                      <KitchenAccessorysMainMosogatomedenceComponent />
+                        <KitchenAccessorysMainCsaptelepComponent/>
+                          <KitchenAccessorysMainMosogatoszerAdagolokComponent/>
+                            <KitchenAccessorysMainViztisztitokComponent/>
+                              <KitchenAccessorysMainBeepitettSzemmettarolokComponent/>
+                                <KitchenAccessorysMainKonyhamalacComponent
+                                  id="konyhamalac"/>
+                                    <KitchenAccessorysSliderComponent/>
+                                      <Footer/> </>} />
+              {/*This is the KitchenAccessorys FooterPage button */}
+              <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainFooterComponent"element={<> 
+                <Navbar_Header/>  
+                  <KitchenAccessorysNavbarMainFooterComponent />
+                    <KitchenAccessorysNavbarSecondMainComponent/>
+                      <KitchenAccessorysMainMosogatomedenceComponent />
+                        <KitchenAccessorysMainCsaptelepComponent/>
+                          <KitchenAccessorysMainMosogatoszerAdagolokComponent/>
+                            <KitchenAccessorysMainViztisztitokComponent/>
+                              <KitchenAccessorysMainBeepitettSzemmettarolokComponent/>
+                                <KitchenAccessorysMainKonyhamalacComponent/>
+                                  <KitchenAccessorysSliderComponent/>
+                                    <Footer/> </>} />
+              
+              
 
         <Route path="/furniture_pages/FurnitureNobilia" element={<> <FurnitureNobiliaNavbarComponent/> <FurnitureNobilia /> <Footer /></>}/>
         <Route path="/furniture_pages/FurnitureAran" element={<> <FurnitureAranNavbarComponent /> <FurnitureAran /><Footer /> </>}/>
@@ -68,12 +183,6 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
         <Route path="/kitchen_pages/KitchenMiele" element={<> <KitchenMieleNavbarComponent /><KitchenMiele /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenNeff" element={<> <KitchenNeffNavbarComponent /><KitchenNeff /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenWhirlpool" element={<> <KitchenWhirlpoolNavbarComponent /><KitchenWhirlpool /><Footer /> </> }/>
-
-        <Route path="/kitchen_accessorys_page/KitchenAccessorysBlanco" element={<> <KitchenAccessorysBlancoNavbarComponent/> <KitchenAccessorysBlanco/> <Footer/> </>}/>
-        <Route path="/kitchen_accessorys_page/KitchenAccessorysDyson" element={<> <KitchenAccessorysDysonNavbarComponent/> <KitchenAccessorysDyson/> <Footer/> </>}/>
-        <Route path="/kitchen_accessorys_page/KitchenAccessorysGrohe" element={<> <KitchenAccessorysGroheNavbarComponent/> <GroheHeroSearchComponent/> <KitchenAccessorysGrohe/> <GroheFirstPhotoBlock/> <GrogeSecondPhotoBlock/> <Footer/> </>}/>
-        <Route path="/kitchen_accessorys_page/KitchenAccessorysSchock" element={<> <KitchenAccessorysSchockNavbarComponent/> <KitchenAccessorysSchock/> <Footer/> </>}/>
-        <Route path="/kitchen_accessorys_page/KitchenAccessorysTekaGlobal" element={<> <KitchenAccessorysTekaGlobalNavbarComponent/> <KitchenAccessorysTekaGlobal/> <Footer/> </>}/>
 
       </Routes>
     </Router>

@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import privacy from '../footer_pages_components/Privacy';
+import KitchenAccessorysNavbarMainFooterComponent from '../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainFooterComponent';
 import { BsLungs } from 'react-icons/bs';
 
 export default function Footer() {
@@ -37,12 +38,14 @@ export default function Footer() {
           </ul>
           <ul className='text-right lg:flex'>
             <li>
-              <Link>Bemutatkozás</Link></li>
+              <Link>Rólunk</Link></li>
             <li>
               <Link>Konyhai eszközök</Link></li>
             <li>
-              <Link    
-             >Konyhai kiegészítők</Link></li>
+              <Link
+              to="../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainFooterComponent" 
+              element={ <KitchenAccessorysNavbarMainFooterComponent />}
+              >Konyhai kiegészítők</Link></li>
             <li>
               <Link
               >Bútor katalógus 

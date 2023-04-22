@@ -7,7 +7,7 @@ import grohe_5 from '../../../assets_for_pages/assets_for_kitchen_accessorys/gro
 
 export default function GrogeFirstPhotoBlock(){
   return (
-    <div className='max-w-[1400px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-4'>
+    <div className='max-w-[1400px] m-auto py-16 px-4 mt-5 grid lg:grid-cols-2 gap-4'>
       {/* Left Side */}
       <div className='grid grid-cols-2 grid-rows-6 h-[80vh]'>
         <img
