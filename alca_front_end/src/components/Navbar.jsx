@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { useRef } from 'react';
 import { BsPerson } from 'react-icons/bs';
 import { BiSearch} from 'react-icons/bi';
 import {AiOutlineClose} from 'react-icons/ai';
@@ -7,12 +6,7 @@ import { HiOutlineMenuAlt4} from 'react-icons/hi';
 import {FaFacebook, FaInstagram, FaPinterest} from 'react-icons/fa';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { BrowserRouter, Link } from "react-router-dom";
-import { NavLink } from 'react-router-dom';
-import FurnitureNobilia from '../furniture_pages/FurnitureNobilia';
-import FurnitureAran from '../furniture_pages/FurnitureAran';
-import FurnitureLube from '../furniture_pages/FurnitureLube';
-import FurnitureVertex from '../furniture_pages/FurnitureVertex';
+import { Link } from "react-router-dom";
 import KitchenAeg from '../kitchen_pages/KitchenAeg';
 import KitchenBosch from '../kitchen_pages/KitchenBosch';
 import KitchenElectrolux from '../kitchen_pages/KitchenElectrolux';
@@ -20,8 +14,7 @@ import KitchenMiele from '../kitchen_pages/KitchenMiele';
 import KitchenNeff from '../kitchen_pages/KitchenNeff';
 import KitchenWhirlpool from '../kitchen_pages/KitchenWhirlpool';
 import KitchenAccessorysSchock from '../kitchen_accessorys_page/KitchenAccessorysSchock';
-import KitchenAccessorysTekaGlobal from '../kitchen_accessorys_page/KitchenAccessorysTekaGlobal';
-import KitchenAccessorysNavbarMainComponent from '../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent';
+import FurnitureMainAranComponent from '../FurniturePageComponents/FurnitureMainAranComponent';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -29,14 +22,6 @@ function classNames(...classes) {
 
 export default function Navbar() {
 
-    const csaptelepRef = useRef(null);
-
-    const [isCsaptelepFocused, setIsCsaptelepFocused] = useState(false);
-    
-    function handleCsaptelepClick(event) {
-        event.preventDefault();
-        setIsCsaptelepFocused(true);
-      }
 
     const [nav, setNav ] = useState(false);
     const [logo, setLogo ] = useState(false); 
@@ -73,28 +58,35 @@ export default function Navbar() {
                 >
                 <Menu.Items className="absolute right-0 w-40 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
+
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                to="../furniture_pages/FurnitureNobilia" 
-                                element={<FurnitureNobilia/>}
+                                to="../FurniturePageComponents/FurnitureNavbarMainNobiliaComponent#nobilia"
                                 exact
+                                
                                     className={classNames(
                                         active
                                             ? "bg-gray-100 text-gray-900"
                                             : "text-gray-700",
                                         "block px-4 py-2 text-center"
                                     )}
+                                    onClick={() => {
+                                        const element = document.getElementById("nobilia");
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: "auto" });
+                                        }
+                                      }}
                                 >
                                     Nobilia
                                 </Link>
                             )}
                         </Menu.Item>
+
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to="../furniture_pages/FurnitureAran" 
-                                    element={<FurnitureAran/>}
+                                to="../FurniturePageComponents/FurnitureNavbarMainAranComponent#aran"
                                     exact
                                     className={classNames(
                                         active
@@ -102,16 +94,24 @@ export default function Navbar() {
                                             : "text-gray-700",
                                         "block px-4 py-2 text-center"
                                     )}
-                                >
+                                    onClick={() => {
+                                        const element = document.getElementById("aran");
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: "auto" });
+                                        }
+                                      }}
+                                    >
                                     Aran
                                 </Link>
                             )}
                         </Menu.Item>
+
+
+
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
-                                    to="../furniture_pages/FurnitureLube" 
-                                    element={<FurnitureLube/>}
+                                to="../FurniturePageComponents/FurnitureNavbarMainLubeComponent#lube"
                                     exact
                                     className={classNames(
                                         active
@@ -119,16 +119,22 @@ export default function Navbar() {
                                             : "text-gray-700",
                                         "block px-4 py-2 text-center"
                                     )}
+                                    onClick={() => {
+                                        const element = document.getElementById("lube");
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: "auto" });
+                                        }
+                                      }}
                                 >
                                     Lube
                                 </Link>
                             )}
                         </Menu.Item>
+                        
                             <Menu.Item>
                                 {({ active }) => (
                                     <Link
-                                        to="../furniture_pages/FurnitureVertex" 
-                                        element={<FurnitureVertex/>}
+                                        to="../FurniturePageComponents/FurnitureNavbarMainCreoComponent#creo"
                                         exact
                                         className={classNames(
                                             active
@@ -136,16 +142,22 @@ export default function Navbar() {
                                                 : "text-gray-700",
                                             "block px-4 py-2 text-center"
                                         )}
+                                        onClick={() => {
+                                            const element = document.getElementById("creo");
+                                            if (element) {
+                                              element.scrollIntoView({ behavior: "auto" });
+                                            }
+                                          }}
                                     >
-                                        Vertex
+                                        Creo
                                     </Link>
                                 )}
                             </Menu.Item>
+
                             <Menu.Item>
                                 {({ active }) => (
                                     <Link
-                                        to="../furniture_pages/FurnitureVertex" 
-                                        element={<FurnitureVertex/>}
+                                        to="../FurniturePageComponents/FurnitureNavbarMainVertexComponent#vertex"
                                         exact
                                         className={classNames(
                                             active
@@ -153,8 +165,14 @@ export default function Navbar() {
                                                 : "text-gray-700",
                                             "block w-full px-4 py-2 text-center"
                                         )}
+                                        onClick={() => {
+                                            const element = document.getElementById("vertex");
+                                            if (element) {
+                                              element.scrollIntoView({ behavior: "auto" });
+                                            }
+                                          }}
                                     >
-                                        Creo
+                                        Vertex
                                     </Link>
                                 )}
                             </Menu.Item>

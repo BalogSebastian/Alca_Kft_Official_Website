@@ -7,7 +7,6 @@ import Kitchen_Accessory from './components/Kitchen_Accessory';
 import Footer from "./components/Footer";
 import AboutPage from "./components/AboutPage";
 import Navbar_Header from "./components/Navbar_Header";
-import Carousel from "./components/Carousel";
 
 import FurniturePartnerSliderComponent from "./partner_components/FurniturePartner/FurniturePartnerSliderComponent";
 import KitchenAccessorysSliderComponent from "./partner_components/KitchenAccessorysSliderBaseComponent.jsx/KitchenAccessorysSliderComponent";
@@ -51,6 +50,22 @@ import KitchenAccessorysMainViztisztitokComponent from "./KitchenAccessorysPageC
 import KitchenAccessorysMainBeepitettSzemmettarolokComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysMainBeepitettSzemmettarolokComponent";
 import KitchenAccessorysMainKonyhamalacComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysMainKonyhamalacComponent";
 
+//Furniture Pages
+import FurnitureMainNobiliaComponent from "./FurniturePageComponents/FurnitureMainNobiliaComponent";
+import FurnitureNavbarMainNobiliaComponent from "./FurniturePageComponents/FurnitureNavbarMainNobiliaComponent";
+import FurnitureNavbarSecondMainComponent from "./FurniturePageComponents/FurnitureNavbarSecondMainComponent";
+import FurnitureMainAranComponent from "./FurniturePageComponents/FurnitureMainAranComponent";
+import FurnitureNavbarMainAranComponent from "./FurniturePageComponents/FurnitureNavbarMainAranComponent";
+import FurnitureNavbarMainLubeComponent from "./FurniturePageComponents/FurnitureNavbarMainLubeComponent";
+import FurnitureMainLubeComponent from "./FurniturePageComponents/FurnitureMainLubeComponent";
+import FurnitureNavbarMainCreoComponent from "./FurniturePageComponents/FurnitureNavbarMainCreoComponent";
+import FurnitureMainCreoComponent from "./FurniturePageComponents/FurnitureMainCreoComponent";
+import FurnitureMainVertexComponent from "./FurniturePageComponents/FurnitureMainVertexComponent";
+import FurnitureNavbarMainVertexComponent from "./FurniturePageComponents/FurnitureNavbarMainVertexComponent";
+import FurnitureFooterElement from "./FurniturePageComponents/FurnitureFooterElement";
+
+
+
 import FooterPrivacyNavbar from "./footer_pages_components/FooterPrivacyNavbar";
 import KitchenAccessorysBlanco from "./kitchen_accessorys_page/KitchenAccessorysBlanco";
 import KitchenAccessorysDyson from "./kitchen_accessorys_page/KitchenAccessorysDyson";
@@ -74,8 +89,87 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
     <Router>
       <Routes>
 
-        <Route path="/" element={<> <Navbar_Header/> <Navbar /> <Hero /> <Furniture /> <Kitchen /> <Kitchen_Accessory /> <AboutPage/> <FurniturePartnerSliderComponent/>  <Footer /></>} /> 
+        <Route path="/" element={<> <Navbar_Header/>
+          <Navbar />
+            <Hero /> 
+              <Furniture />
+                 <Kitchen />
+                    <Kitchen_Accessory />
+                       <AboutPage/> 
+                        <FurniturePartnerSliderComponent/>
+                          <Footer /></>} /> 
         <Route path="/footer_pages_components/privacy" element={<> <FooterPrivacyNavbar/> <Privacy /> <Footer /></>} />
+
+
+
+
+        {/* Furniture Pages */}
+        <Route path="/FurniturePageComponents/FurnitureNavbarMainNobiliaComponent" element={<>
+          <Navbar_Header/> 
+            <FurnitureNavbarMainNobiliaComponent/>
+              <FurnitureNavbarSecondMainComponent/> 
+                <FurnitureMainNobiliaComponent
+                  id="nobilia"
+                    />
+                     <FurnitureMainAranComponent/>
+                      <FurnitureMainLubeComponent/>
+                        <FurnitureMainCreoComponent/>
+                        <FurnitureMainVertexComponent
+                        />
+                      </>}/>
+
+        <Route path="/FurniturePageComponents/FurnitureNavbarMainAranComponent" element={<>
+          <Navbar_Header/> 
+            <FurnitureNavbarMainAranComponent/>
+              <FurnitureNavbarSecondMainComponent/> 
+                <FurnitureMainNobiliaComponent/>
+                        <FurnitureMainAranComponent
+                        id="aran"/>
+                          <FurnitureMainLubeComponent/>
+                            <FurnitureMainCreoComponent/>
+                            <FurnitureMainVertexComponent
+                        />
+                      </>}/>
+        <Route path="/FurniturePageComponents/FurnitureNavbarMainLubeComponent" element={<>
+          <Navbar_Header/> 
+            <FurnitureNavbarMainLubeComponent/>
+              <FurnitureNavbarSecondMainComponent/> 
+                <FurnitureMainNobiliaComponent/>
+                  <FurnitureMainAranComponent/>
+                    <FurnitureMainLubeComponent
+                      id="lube"
+                       />
+                       <FurnitureMainCreoComponent/>
+                       <FurnitureMainVertexComponent
+                        />
+                        </>}/>
+        <Route path="/FurniturePageComponents/FurnitureNavbarMainCreoComponent" element={<>
+          <Navbar_Header/> 
+            <FurnitureNavbarMainCreoComponent/>
+              <FurnitureNavbarSecondMainComponent/> 
+                <FurnitureMainNobiliaComponent/>
+                  <FurnitureMainAranComponent/>
+                    <FurnitureMainLubeComponent/>
+                      <FurnitureMainCreoComponent
+                      id="creo"
+                      />
+                      <FurnitureMainVertexComponent
+                        />
+                        </>}/>
+
+          <Route path="/FurniturePageComponents/FurnitureNavbarMainVertexComponent" element={<>
+          <Navbar_Header/> 
+            <FurnitureNavbarMainVertexComponent/>
+              <FurnitureNavbarSecondMainComponent/> 
+                <FurnitureMainNobiliaComponent/>
+                  <FurnitureMainAranComponent/>
+                    <FurnitureMainLubeComponent/>
+                      <FurnitureMainCreoComponent/>
+                        <FurnitureMainVertexComponent
+                        id="vertex"
+                        />
+                          </>}/>
+
 
           {/* Here are the kitchen Accessorys components */}
           <Route path="/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoMedenceComponent" element={<> 
@@ -110,7 +204,7 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                   <KitchenAccessorysNavbarSecondMainComponent/>
                     <KitchenAccessorysMainMosogatomedenceComponent />
                       <KitchenAccessorysMainCsaptelepComponent/>
-                        <KitchenAccessorysMainMosogatoszerAdagolokComponent
+                        <KitchenAccessorysMainMosogatoszerAdagolokComponent 
                         id="mosogatoszeradagolo"/>
                           <KitchenAccessorysMainViztisztitokComponent/>
                             <KitchenAccessorysMainBeepitettSzemmettarolokComponent/>
@@ -169,7 +263,6 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                                 <KitchenAccessorysMainKonyhamalacComponent/>
                                   <KitchenAccessorysSliderComponent/>
                                     <Footer/> </>} />
-              
               
 
         <Route path="/furniture_pages/FurnitureNobilia" element={<> <FurnitureNobiliaNavbarComponent/> <FurnitureNobilia /> <Footer /></>}/>
