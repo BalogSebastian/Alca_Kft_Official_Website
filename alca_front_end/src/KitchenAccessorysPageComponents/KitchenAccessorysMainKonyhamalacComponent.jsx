@@ -19,6 +19,7 @@ const KitchenAccessorysMainKonyhamalacComponent = ({ id }) => {
 
   return (
     <div id={id} className='max-w-[1400px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-4'>
+      
     {/* Left Side */}
   <div className='flex flex-col h-full justify-center ml-40'>
       <h3 className='text-5xl md:text-6xl font-bold'>Konyhamalacok</h3>

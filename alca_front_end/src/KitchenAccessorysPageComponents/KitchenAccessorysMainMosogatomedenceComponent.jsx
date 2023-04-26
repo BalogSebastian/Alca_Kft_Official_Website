@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import grohe_1 from '../assets_for_pages/assets_for_kitchen_accessorys/grohe_1.jpeg';
 import grohe_2 from '../assets_for_pages/assets_for_kitchen_accessorys/grohe_2.jpeg';
 import grohe_3 from '../assets_for_pages/assets_for_kitchen_accessorys/grohe_3.jpeg';

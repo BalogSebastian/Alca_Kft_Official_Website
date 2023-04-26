@@ -390,4 +390,4 @@ const KitchenAccessorysNavbarSecondMainComponent = () => {
   )
 }
 
-export default KitchenAccessorysNavbarSecondMainComponent
+export default KitchenAccessorysNavbarSecondMainComponent;

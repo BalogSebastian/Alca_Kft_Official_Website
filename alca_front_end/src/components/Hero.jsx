@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import {AiOutlineSearch } from 'react-icons/ai';
-import furniture from "../assets/furniture.mp4";
 import { useNavigate } from 'react-router-dom';
 import Autosuggest from 'react-autosuggest';
 import main_page_furniture_video from '../assets/main_page_furniture_video.mp4';
 
-const suggestion = ['aran','nobilia','vertex','lube',
+const suggestion = [
 'electrolux','miele','aeg','bosch',
 'neff','whirlpool','konyhamalac',
 'mosogatótálcák','csaptelepek','mosogatószer adagolók',
-'víztisztitók','beépített szemméttárolók']
+'víztisztitók','beépített szemméttárolók','nobilia','aran',
+'lube','creo','vertex']
 
 const Hero = ()  => {
 
@@ -23,6 +23,21 @@ const Hero = ()  => {
     const handleSearch = (event) => {
       event.preventDefault();
       switch (value) {
+        case 'nobilia':
+          navigate('/FurniturePageComponents/FurnitureNavbarMainNobiliaComponent');
+          break;
+        case 'aran':
+          navigate('/FurniturePageComponents/FurnitureNavbarMainAranComponent');
+          break;
+        case 'lube':
+          navigate('/FurniturePageComponents/FurnitureNavbarMainLubeComponent');
+          break;
+        case 'creo':
+          navigate('/FurniturePageComponents/FurnitureNavbarMainCreoComponent');
+          break;
+        case 'vertex':
+          navigate('/FurniturePageComponents/FurnitureNavbarMainVertexComponent');
+          break;
         case 'mosogatótálcák':
           navigate('/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainMosogatoMedenceComponent');
           break;
@@ -41,15 +56,6 @@ const Hero = ()  => {
         case 'konyhamalac':
           navigate('/KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainKonyhamalacComponent');
           break;
-        case 'aran':
-          navigate('/furniture_pages/FurnitureAran');
-          break;
-        case 'nobilia':
-          navigate('/furniture_pages/FurnitureNobilia');
-          break;
-        case 'lube':
-          navigate('/furniture_pages/FurnitureLube')
-          break
         case 'vertex':
           navigate('/furniture_pages/FurnitureVertex')
           break
