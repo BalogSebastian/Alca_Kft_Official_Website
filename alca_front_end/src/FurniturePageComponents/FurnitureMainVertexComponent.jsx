@@ -19,7 +19,6 @@ const FurnitureMainVertexComponent = ({ id }) => {
     }
   }, [id]);
 
-
   return (
         <div id={id} className='mx-auto h-screen max-w-[1240px] px-4 mb-30 py-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
             <div className='relative'>

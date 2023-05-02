@@ -7,6 +7,7 @@ import {
 import { Link } from 'react-router-dom';
 import privacy from '../footer_pages_components/Privacy';
 import KitchenAccessorysNavbarMainFooterComponent from '../KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainFooterComponent';
+import FurnitureNavbarMainFooterComponent from '../FurniturePageComponents/FurnitureNavbarMainFooterComponent';
 
 export default function Footer() {
   return (
@@ -38,6 +39,8 @@ export default function Footer() {
           <ul className='text-right lg:flex'>
             <li>
               <Link
+              to="../FurniturePageComponents/FurnitureNavbarMainFooterComponent" 
+              element={ <FurnitureNavbarMainFooterComponent />}
               >
               Konyhabútorok 
               </Link>

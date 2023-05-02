@@ -62,7 +62,7 @@ import FurnitureNavbarMainCreoComponent from "./FurniturePageComponents/Furnitur
 import FurnitureMainCreoComponent from "./FurniturePageComponents/FurnitureMainCreoComponent";
 import FurnitureMainVertexComponent from "./FurniturePageComponents/FurnitureMainVertexComponent";
 import FurnitureNavbarMainVertexComponent from "./FurniturePageComponents/FurnitureNavbarMainVertexComponent";
-import FurnitureFooterElement from "./FurniturePageComponents/FurnitureFooterElement";
+import FunrnitureNavbarMainFooterComponent from "./FurniturePageComponents/FurnitureNavbarMainFooterComponent";
 
 
 
@@ -80,6 +80,7 @@ import KitchenAccessorysTekaGlobalNavbarComponent from "./kithcen_accessorys_nav
 import GroheFirstPhotoBlock from './page_components/kitchen_accessorys/grohe_page_components/GroheFirstPhotoBlock';
 import GrogeSecondPhotoBlock from "./page_components/kitchen_accessorys/grohe_page_components/GrogeSecondPhotoBlock";
 import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe_page_components/GroheHeroSearchComponent";
+import FurnitureNavbarMainFooterComponent from "./FurniturePageComponents/FurnitureNavbarMainFooterComponent";
 
 
 
@@ -168,6 +169,18 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                         <FurnitureMainVertexComponent
                         id="vertex"
                         />
+                          </>}/>
+              {/* The footer is doesn't work, its work but its need to be adjusted for the responsivity */}
+        <Route path="/FurniturePageComponents/FurnitureNavbarMainFooterComponent" element={<>
+          <Navbar_Header/> 
+            <FurnitureNavbarMainFooterComponent/>
+              <FurnitureNavbarSecondMainComponent/> 
+                <FurnitureMainNobiliaComponent/>
+                  <FurnitureMainAranComponent/>
+                    <FurnitureMainLubeComponent/>
+                      <FurnitureMainCreoComponent/>
+                        <FurnitureMainVertexComponent/>
+                        <Footer/>
                           </>}/>
 
 
@@ -263,6 +276,8 @@ import GroheHeroSearchComponent from "./page_components/kitchen_accessorys/grohe
                                 <KitchenAccessorysMainKonyhamalacComponent/>
                                   <KitchenAccessorysSliderComponent/>
                                     <Footer/> </>} />
+
+
               
 
         <Route path="/furniture_pages/FurnitureNobilia" element={<> <FurnitureNobiliaNavbarComponent/> <FurnitureNobilia /> <Footer /></>}/>
