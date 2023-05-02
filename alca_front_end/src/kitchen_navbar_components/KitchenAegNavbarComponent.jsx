@@ -25,9 +25,6 @@ export default function KitchenAegNavbarComponent(){
 
     <Menu>
     <div className='flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white'>
-        <div>
-            <h1 onClick={handleNav}  className={logo ? 'hidden' : 'block'}>Alca Kft.</h1>
-        </div>
         <ul className='hidden md:flex'>
 
         {/* Itt található a header-ön lévő elemek plsuz a dropdown-jai */}

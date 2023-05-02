@@ -25,14 +25,20 @@ import KitchenBoschNavbarComponent from "./kitchen_navbar_components/KitchenBosc
 import KitchenElectroluxNavbarComponent from './kitchen_navbar_components/KitchenElectroluxNavbarComponent';
 import KitchenNeffNavbarComponent from './kitchen_navbar_components/KitchenNeffNavbarComponent';
 import KitchenWhirlpoolNavbarComponent from './kitchen_navbar_components/KitchenWhirlpoolNavbarComponent';
-import KitchenMieleNavbarComponent from './kitchen_navbar_components/KithcenMieleNavbarComponent';
+import KitchenMieleNavbarComponent from './kitchen_main/kitchen_miele/KithcenMieleNavbarComponent';
 import KitchenAeg from './kitchen_pages/KitchenAeg';
 import KitchenBosch from './kitchen_pages/KitchenBosch';
 import KitchenElectrolux from './kitchen_pages/KitchenElectrolux';
-import KitchenMiele from "./kitchen_pages/KitchenMiele";
+import KitchenMiele from "./kitchen_main/kitchen_miele/KitchenMiele";
 import KitchenNeff from './kitchen_pages/KitchenNeff';
 import KitchenWhirlpool from "./kitchen_pages/KitchenWhirlpool";
 import Privacy from "./footer_pages_components/Privacy";
+
+import KitchenMieleOvenComponent from "./kitchen_main/kitchen_miele/KitchenMieleOvenComponent";
+import KitchenMieleCookingPlatesComponent from "./kitchen_main/kitchen_miele/KitchenMieleCookingPlatesComponent";
+import KitchenMieleMicroComponent from "./kitchen_main/kitchen_miele/KitchenMieleMicroComponent";
+import KithcenMieleDishVasherWashComponent from "./kitchen_main/kitchen_miele/KithcenMieleDishVasherWashComponent";
+
 
 //KitchenAccessorysViewPage
 import KitchenAccessorysNavbarMainCsaptelepComponent from "./KitchenAccessorysPageComponents/KitchenAccessorysNavbarMainCsaptelepComponent";
@@ -288,13 +294,44 @@ import FurnitureNavbarMainFooterComponent from "./FurniturePageComponents/Furnit
         <Route path="/kitchen_pages/KitchenAeg" element={<> <KitchenAegNavbarComponent /><KitchenAeg /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenBosch" element={<> <KitchenBoschNavbarComponent /><KitchenBosch /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenElectrolux" element={<> <KitchenElectroluxNavbarComponent /><KitchenElectrolux /><Footer /></>}/>
-        <Route path="/kitchen_pages/KitchenMiele" element={<> <KitchenMieleNavbarComponent /><KitchenMiele /><Footer /></>}/>
+
+        
+        <Route path="/kitchen_pages/KitchenMiele" element={
+        <><Navbar_Header/>
+            <KitchenMieleNavbarComponent />
+                <KitchenMiele />
+                    <KitchenMieleOvenComponent
+                      id="miele_oven"
+                      />
+                      <KitchenMieleCookingPlatesComponent
+                      id="miele_cooking_plates"
+                      />
+                          <KitchenMieleMicroComponent
+                          id="miele_micro"
+                          />
+                              <KithcenMieleDishVasherWashComponent
+                              id="diswasher_wash"/>
+                      <Footer /></>}
+        />
+
+        {/* <Route path="/kitchen_pages/KitchenMiele" element={
+        <><Navbar_Header/>
+            <KitchenMieleNavbarComponent />
+                <KitchenMiele />
+                    <KitchenMieleOvenComponent
+                      />
+                        <KitchenMieleCookingPlatesComponent
+                        id="miele_cooking_plates"/>
+                      <Footer /></>}
+                      /> */}
+
+
+
         <Route path="/kitchen_pages/KitchenNeff" element={<> <KitchenNeffNavbarComponent /><KitchenNeff /><Footer /></>}/>
         <Route path="/kitchen_pages/KitchenWhirlpool" element={<> <KitchenWhirlpoolNavbarComponent /><KitchenWhirlpool /><Footer /> </> }/>
 
       </Routes>
     </Router>
-
        );
       }
 

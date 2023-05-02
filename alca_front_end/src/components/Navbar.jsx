@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import KitchenAeg from '../kitchen_pages/KitchenAeg';
 import KitchenBosch from '../kitchen_pages/KitchenBosch';
 import KitchenElectrolux from '../kitchen_pages/KitchenElectrolux';
-import KitchenMiele from '../kitchen_pages/KitchenMiele';
+import KitchenMiele from '../kitchen_main/kitchen_miele/KitchenMiele';
 import KitchenNeff from '../kitchen_pages/KitchenNeff';
 import KitchenWhirlpool from '../kitchen_pages/KitchenWhirlpool';
 import KitchenAccessorysSchock from '../kitchen_accessorys_page/KitchenAccessorysSchock';
